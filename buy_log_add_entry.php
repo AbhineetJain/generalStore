@@ -60,12 +60,20 @@
 
             <div class="portlet-body">  
 
-              <form id="demo-validation" action="./components-validation.html" data-validate="parsley" class="form parsley-form">
+              <form id="demo-validation" action="scripts/add_buy_log.php" method="get" data-validate="parsley" class="form parsley-form">
 
                 <div class="form-group">  
                   <label for="wholesalerSelect">Wholesaler Name</label>
                   <select id="wholesalerSelect" name="wholesaler" class="form-control parsley-validated" data-required="true">
                     <option value="">Please Select</option>
+                    <?php
+                      require 'scripts/config_sql.php';
+
+                      $sql = $mysqli->query("SELECT name from wholesalers WHERE id>0");
+
+                      while($row = $sql->fetch_assoc())
+                        echo '<option value="'.$row['name'].'">'.$row['name'].'</option>';
+                    ?>
                   </select>
                 </div> <!-- /.form-group -->
 
@@ -76,7 +84,7 @@
 
                 <div class="form-group">
                   <label for="qty">Quantity</label>
-                  <input type="number" id="qty" name="qty" class="form-control parsley-validated" data-required="true">
+                  <input type="number" id="qty" name="quantity" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
@@ -86,12 +94,12 @@
 
                 <div class="form-group">
                   <label for="dop">Date of Purchase</label>
-                  <input type="date" id="dop" name="date_of_purchase" class="form-control parsley-validated" data-required="true">
+                  <input type="text" id="dop" name="date_of_purchase" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 
                 <div class="form-group">
-                  <button type="submit" class="btn btn-danger">Validate</button>
+                  <input type="submit" class="btn btn-danger" value="Submit">Submit</input>
                 </div> <!-- /.form-group -->
 
               </form>
