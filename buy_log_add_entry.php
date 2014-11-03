@@ -60,7 +60,7 @@
 
             <div class="portlet-body">  
 
-              <form id="demo-validation" action="scripts/add_buy_log.php" method="get" data-validate="parsley" class="form parsley-form">
+              <form id="demo-validation" action="./scripts/add_buy_log.php" method="get" data-validate="parsley" class="form parsley-form">
 
                 <div class="form-group">  
                   <label for="wholesalerSelect">Wholesaler Name</label>
@@ -99,7 +99,7 @@
 
                 
                 <div class="form-group">
-                  <input type="submit" class="btn btn-danger" value="Submit">Submit</input>
+                  <input type="submit" class="btn btn-danger" value="Submit">
                 </div> <!-- /.form-group -->
 
               </form>
