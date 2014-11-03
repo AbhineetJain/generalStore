@@ -62,80 +62,34 @@
 
               <form id="demo-validation" action="./components-validation.html" data-validate="parsley" class="form parsley-form">
 
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="name" class="form-control parsley-validated" data-required="true">
-                </div> <!-- /.form-group -->
-
-                <div class="form-group">
-                  <label for="textarea-input">Textarea</label>
-                  <textarea data-required="true" data-minlength="5" name="textarea-input" id="textarea-input" cols="10" rows="2" class="form-control parsley-validated"></textarea>
+                <div class="form-group">  
+                  <label for="wholesalerSelect">Wholesaler Name</label>
+                  <select id="wholesalerSelect" name="wholesaler" class="form-control parsley-validated" data-required="true">
+                    <option value="">Please Select</option>
+                  </select>
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">  
-                  <label for="validateSelect">Select</label>
-                  <select id="validateSelect" name="validateSelect" class="form-control parsley-validated" data-required="true">
-                    <option value="">Please Select</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                  </select>
+                  <label for="commodity">Commodity</label>
+                  <input type="text" id="commodity" name="commodity" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
-                  <label for="select-multi-input">Select (multiple)</label>
-                  <select data-required="true" multiple="" id="select-multi-input" class="form-control parsley-validated">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                  </select>
+                  <label for="qty">Quantity</label>
+                  <input type="number" id="qty" name="qty" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
-                  <label>Checkbox (stacked)</label>
-
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox" name="checkbox-1" class="parsley-validated" data-mincheck="2">
-                    Option 1
-                    </label>
-                  </div> <!-- /.checkbox -->
-
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox" name="checkbox-1" class="parsley-validated" data-mincheck="2">
-                    Option 2
-                    </label>
-                  </div> <!-- /.checkbox -->
-
+                  <label for="priceRs">Price</label>
+                  <input type="number" id="price" name="price" step="0.01" class="form-control half-width parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
-
 
                 <div class="form-group">
-                  <label>Radio (stacked)</label>
-
-                  <div class="radio">
-                    <label>
-                    <input type="radio" name="radio-1" class="parsley-validated" data-required="true">
-                    Option 1
-                    </label>
-                  </div> <!-- /.radio -->
-
-                  <div class="radio">
-                    <label>
-                    <input type="radio" name="radio-1" class="parsley-validated" data-required="true">
-                    Option 2
-                    </label>
-                  </div> <!-- /.radio -->
-                  
+                  <label for="dop">Date of Purchase</label>
+                  <input type="date" id="dop" name="date_of_purchase" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
+                
                 <div class="form-group">
                   <button type="submit" class="btn btn-danger">Validate</button>
                 </div> <!-- /.form-group -->

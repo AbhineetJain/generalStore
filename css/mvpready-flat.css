@@ -11,6 +11,15 @@
 * Website: http://mvpready.com
 *
 * ======================================================== */
+
+/* ============================
+  Custom CSS
+ * ============================ */
+
+ .half-width {
+  width: 20%;
+ }
+
 .navbar {
   background-image: none;
   background-repeat: no-repeat;
