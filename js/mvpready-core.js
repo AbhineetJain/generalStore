@@ -104,11 +104,11 @@ var mvpready_core = function () {
   }
 
   var navEnhancedInit = function () {
-    $('.mainnav-menu').find ('> .is-open').addClass ('active')
+    $('.mainnav-menu').find ('> .active').addClass ('is-open')
 
     $('.mainnav-menu > .dropdown').on ('show.bs.dropdown', function () {
-      $(this).addClass ('active')
-      $(this).siblings ().removeClass ('active')
+      $(this).addClass ('is-open')
+      $(this).siblings ().removeClass ('is-open')
     })
   }
 
