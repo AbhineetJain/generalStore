@@ -60,29 +60,29 @@
 
             <div class="portlet-body">  
 
-              <form id="demo-validation" action="./components-validation.html" data-validate="parsley" class="form parsley-form">
+              <form id="sell-log-form" action="" data-validate="parsley" class="form parsley-form">
 
                 <div class="itemDesc">
-                  <div id="item0">
-                    <button id="close0" class="closebutton btn btn-danger"><i class="fa fa-times"></i></button>
-                    <div class="form-group">  
-                      <label for="item">Item Name</label>
-                      <select id="item" name="item" class="item form-control parsley-validated" data-required="true">
-                        <option value="">Please Select</option>
+                  <!--<div id="itemDiv0" class="itemDivs">
+                    <div class="form-group place-inline">  
+                      <label for="item0">Item Name</label>
+                      <select id="item0" name="item0" class="place-inline item form-control parsley-validated" data-required="true">
+                        <option value="Item no. 1">Item no. 1</option>
                       </select>
-                    </div> <!-- /.form-group -->
+                    </div>
 
-                    <div class="form-group">
-                      <label for="qty">Quantity</label>
-                      <input type="number" id="qty" name="qty" class="form-control half-width parsley-validated" data-required="true">
-                    </div> <!-- /.form-group -->
+                    <div class="form-group place-inline">
+                      <label for="qty0">Quantity</label>
+                      <input type="number" id="qty0" name="qty0" class="place-inline form-control half-width parsley-validated" data-required="true">
+                    </div>
 
-                    <div class="form-group">
-                      <label for="total_price">Price</label>
-                      <input type="number" id="price" name="total_price" step="0.01" class="form-control half-width parsley-validated" data-required="true">
-                    </div> <!-- /.form-group -->
+                    <div class="form-group place-inline">
+                      <label for="total_price0">Price</label>
+                      <input type="number" id="price0" name="total_price0" step="0.01" class="place-inline form-control half-width parsley-validated" data-required="true">
+                    </div>
+                    <button id="close0" class="closebutton btn btn-danger place-inline"><i class="fa fa-times"></i></button>
                     <hr>
-                  </div>
+                  </div>-->
                 </div>
 
                 <button class="btn btn-success" id="add_item"><i class="fa fa-plus"></i> Add Item</button>
