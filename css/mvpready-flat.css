@@ -20,6 +20,26 @@
   width: 20%;
  }
 
+ .itemDesc {
+  border: 1px solid #999999;
+  padding: 20px 20px 0 20px;
+  margin-bottom: 10px;
+ }
+
+ #add_item {
+  margin-bottom: 20px;
+ }
+
+ .closebutton {
+  //float: right;
+  padding: 2px 10px;
+  margin-bottom: 20px;
+ }
+
+/* ============================
+  Custom CSS Ends
+ * ============================ */
+
 .navbar {
   background-image: none;
   background-repeat: no-repeat;

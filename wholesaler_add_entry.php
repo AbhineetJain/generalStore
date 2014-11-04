@@ -63,30 +63,14 @@
               <form id="demo-validation" action="./components-validation.html" data-validate="parsley" class="form parsley-form">
 
                 <div class="form-group">  
-                  <label for="empname">Employee Name</label>
-                  <input type="text" id="empname" name="empname" class="form-control parsley-validated" data-required="true">  
+                  <label for="name">Wholesaler Name</label>
+                  <input type="text" id="empname" name="name" class="form-control parsley-validated" data-required="true">  
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">  
-                  <label for="salary">Salary</label>
-                  <input type="number" id="salary" name="salary" step="0.01" class="form-control half-width parsley-validated" data-required="true">
+                  <label for="transportation_cost">Transportation Cost</label>
+                  <input type="number" id="trans_cost" name="transportation_cost" step="0.01" class="form-control half-width parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
-
-                <div class="form-group">
-                  <label for="address">Address</label>
-                  <textarea data-required="true" data-minlength="5" name="address" id="address" cols="10" rows="2" class="form-control parsley-validated"></textarea>
-                </div> <!-- /.form-group -->
-
-                <div class="form-group">
-                  <label for="contact">Contact</label>
-                  <input type="text" id="contact" name="contact" class="form-control parsley-validated" data-required="true">
-                </div> <!-- /.form-group -->
-
-                <div class="form-group">
-                  <label for="doj">Date of Joining</label>
-                  <input type="date" id="doj" name="date_of_joining" class="form-control parsley-validated" data-required="true">
-                </div> <!-- /.form-group -->
-
                 
                 <div class="form-group">
                   <button type="submit" class="btn btn-danger">Add</button>

@@ -99,7 +99,7 @@
 
                 
                 <div class="form-group">
-                  <input type="submit" class="btn btn-danger" value="Submit">
+                  <input type="submit" class="btn btn-danger" value="Add">
                 </div> <!-- /.form-group -->
 
               </form>

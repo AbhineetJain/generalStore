@@ -62,82 +62,43 @@
 
               <form id="demo-validation" action="./components-validation.html" data-validate="parsley" class="form parsley-form">
 
+                <div class="itemDesc">
+                  <div id="item0">
+                    <button id="close0" class="closebutton btn btn-danger"><i class="fa fa-times"></i></button>
+                    <div class="form-group">  
+                      <label for="item">Item Name</label>
+                      <select id="item" name="item" class="item form-control parsley-validated" data-required="true">
+                        <option value="">Please Select</option>
+                      </select>
+                    </div> <!-- /.form-group -->
+
+                    <div class="form-group">
+                      <label for="qty">Quantity</label>
+                      <input type="number" id="qty" name="qty" class="form-control half-width parsley-validated" data-required="true">
+                    </div> <!-- /.form-group -->
+
+                    <div class="form-group">
+                      <label for="total_price">Price</label>
+                      <input type="number" id="price" name="total_price" step="0.01" class="form-control half-width parsley-validated" data-required="true">
+                    </div> <!-- /.form-group -->
+                    <hr>
+                  </div>
+                </div>
+
+                <button class="btn btn-success" id="add_item"><i class="fa fa-plus"></i> Add Item</button>
+
                 <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="name" class="form-control parsley-validated" data-required="true">
+                  <label for="discount">Discount</label>
+                  <input type="number" id="disc" name="discount" min=0 value=0 max=100 step="0.01" class="form-control half-width parsley-validated" data-required="true">
+                </div> <!-- /.form-group -->
+                
+                <div class="form-group">
+                  <label for="billing_amount">Total Billing Amount</label>
+                  <input type="number" id="bill" name="billing_amount" class="form-control half-width parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
-                  <label for="textarea-input">Textarea</label>
-                  <textarea data-required="true" data-minlength="5" name="textarea-input" id="textarea-input" cols="10" rows="2" class="form-control parsley-validated"></textarea>
-                </div> <!-- /.form-group -->
-
-                <div class="form-group">  
-                  <label for="validateSelect">Select</label>
-                  <select id="validateSelect" name="validateSelect" class="form-control parsley-validated" data-required="true">
-                    <option value="">Please Select</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                  </select>
-                </div> <!-- /.form-group -->
-
-                <div class="form-group">
-                  <label for="select-multi-input">Select (multiple)</label>
-                  <select data-required="true" multiple="" id="select-multi-input" class="form-control parsley-validated">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                  </select>
-                </div> <!-- /.form-group -->
-
-                <div class="form-group">
-                  <label>Checkbox (stacked)</label>
-
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox" name="checkbox-1" class="parsley-validated" data-mincheck="2">
-                    Option 1
-                    </label>
-                  </div> <!-- /.checkbox -->
-
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox" name="checkbox-1" class="parsley-validated" data-mincheck="2">
-                    Option 2
-                    </label>
-                  </div> <!-- /.checkbox -->
-
-                </div> <!-- /.form-group -->
-
-
-                <div class="form-group">
-                  <label>Radio (stacked)</label>
-
-                  <div class="radio">
-                    <label>
-                    <input type="radio" name="radio-1" class="parsley-validated" data-required="true">
-                    Option 1
-                    </label>
-                  </div> <!-- /.radio -->
-
-                  <div class="radio">
-                    <label>
-                    <input type="radio" name="radio-1" class="parsley-validated" data-required="true">
-                    Option 2
-                    </label>
-                  </div> <!-- /.radio -->
-                  
-                </div> <!-- /.form-group -->
-
-                <div class="form-group">
-                  <button type="submit" class="btn btn-danger">Validate</button>
+                  <input type="submit" class="btn btn-danger" value="Add" />
                 </div> <!-- /.form-group -->
 
               </form>
@@ -185,6 +146,7 @@
 <!-- Plugin JS -->
 <script src="./js/demos/validation.js"></script>
 
+<script src="./js/customized.js"></script>
 
 </body>
 </html>
