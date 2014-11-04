@@ -11,8 +11,19 @@ function main() {
 		function(e) {
 			form_data = $(this).serializeArray();
 			console.log(form_data);
-			var json_string = form_data.toSource();
+			var main_array = [];
+			for (var i = 0; i < form_data.length-2; i++) {
+				var x = {};
+				x[form_data[i].name] = form_data[i].value;
+				main_array.push(x);
+			};
+			json_object = {};
+			json_object['items'] = main_array;
+			json_object[form_data[form_data.length - 2].name] = form_data[form_data.length - 2].value;
+			json_object[form_data[form_data.length - 1].name] = form_data[form_data.length - 1].value;
+			var json_string = JSON.stringify(json_object);
 			console.log(json_string);
+			$.get({'url': '../scripts/add_sell_log.php', 'data': json_string});
 			e.preventDefault();
 		}
 	);

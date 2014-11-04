@@ -50,7 +50,7 @@
 
       <div class="row">
 
-        <div class="col-md-6 col-md-push-3 col-sm-8 col-sm-push-2 ">
+        <div class="col-md-8 col-md-push-2 col-sm-8 col-sm-push-2 ">
 
           <div class="portlet">	    
 

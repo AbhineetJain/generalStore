@@ -41,6 +41,7 @@
  .closebutton {
   padding: 2px 10px;
   margin-left: 5px;
+  float: right;
 }
 
 .place-inline > label {
