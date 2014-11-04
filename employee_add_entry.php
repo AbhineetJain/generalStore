@@ -60,11 +60,11 @@
 
             <div class="portlet-body">  
 
-              <form id="demo-validation" action="./components-validation.html" data-validate="parsley" class="form parsley-form">
+              <form action="scripts/add_employee.php" data-validate="parsley" class="form parsley-form">
 
                 <div class="form-group">  
                   <label for="empname">Employee Name</label>
-                  <input type="text" id="empname" name="empname" class="form-control parsley-validated" data-required="true">  
+                  <input type="text" id="empname" name="name" class="form-control parsley-validated" data-required="true">  
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">  

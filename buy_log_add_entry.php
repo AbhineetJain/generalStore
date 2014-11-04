@@ -60,19 +60,19 @@
 
             <div class="portlet-body">  
 
-              <form id="demo-validation" action="./scripts/add_buy_log.php" method="get" data-validate="parsley" class="form parsley-form">
+              <form action="./scripts/add_buy_log.php" method="get" data-validate="parsley" class="form parsley-form">
 
                 <div class="form-group">  
                   <label for="wholesalerSelect">Wholesaler Name</label>
-                  <select id="wholesalerSelect" name="wholesaler" class="form-control parsley-validated" data-required="true">
+                  <select id="wholesalerSelect" name="wholesaler_id" class="form-control parsley-validated" data-required="true">
                     <option value="">Please Select</option>
                     <?php
                       require 'scripts/config_sql.php';
 
-                      $sql = $mysqli->query("SELECT name from wholesalers WHERE id>0");
+                      $sql = $mysqli->query("SELECT * from wholesalers WHERE id>0");
 
                       while($row = $sql->fetch_assoc())
-                        echo '<option value="'.$row['name'].'">'.$row['name'].'</option>';
+                        echo '<option value="'.$row['id'].'">'.$row['name'].'</option>';
                     ?>
                   </select>
                 </div> <!-- /.form-group -->

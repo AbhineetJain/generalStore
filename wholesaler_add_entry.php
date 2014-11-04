@@ -60,7 +60,7 @@
 
             <div class="portlet-body">  
 
-              <form id="demo-validation" action="./components-validation.html" data-validate="parsley" class="form parsley-form">
+              <form action="scripts/add_wholesaler.php" data-validate="parsley" class="form parsley-form">
 
                 <div class="form-group">  
                   <label for="name">Wholesaler Name</label>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 03, 2014 at 09:57 PM
+-- Generation Time: Nov 04, 2014 at 05:34 PM
 -- Server version: 5.5.40-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.5
 
@@ -28,13 +28,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `buy_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `wholesaler` varchar(30) NOT NULL,
+  `wholesaler_id` int(11) NOT NULL,
   `date_of_purchase` varchar(15) NOT NULL,
   `commodity` varchar(30) NOT NULL,
   `price` varchar(15) NOT NULL,
   `quantity` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `buy_log`
+--
+
+INSERT INTO `buy_log` (`id`, `wholesaler_id`, `date_of_purchase`, `commodity`, `price`, `quantity`) VALUES
+(1, 1, '11/1/2014', 'Sasti Raand', '100', 6);
 
 -- --------------------------------------------------------
 
@@ -90,7 +97,14 @@ CREATE TABLE IF NOT EXISTS `employees` (
   `contact` varchar(15) NOT NULL,
   `number_of_leaves` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `employees`
+--
+
+INSERT INTO `employees` (`id`, `name`, `salary`, `address`, `date_of_joining`, `contact`, `number_of_leaves`) VALUES
+(2, 'Saksham Aggarwal', '10000', 'E-117', '12/1/2014', '7569156769', 0);
 
 -- --------------------------------------------------------
 
@@ -191,7 +205,7 @@ CREATE TABLE IF NOT EXISTS `wholesalers` (
   `name` varchar(30) NOT NULL,
   `transportation_cost` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `wholesalers`
@@ -199,7 +213,8 @@ CREATE TABLE IF NOT EXISTS `wholesalers` (
 
 INSERT INTO `wholesalers` (`id`, `name`, `transportation_cost`) VALUES
 (1, 'AbhineetRandiKhaana', '5.5'),
-(2, 'Nirmal Baba', '10');
+(2, 'Nirmal Baba', '10'),
+(4, 'Reezig Inc.', '1.25');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

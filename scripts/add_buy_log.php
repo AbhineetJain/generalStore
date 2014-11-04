@@ -2,7 +2,7 @@
 
 require 'config_sql.php';
 
-$wholesaler = $_GET['wholesaler'];
+$wholesaler = $_GET['wholesaler_id'];
 $date_of_purchase = $_GET['date_of_purchase'];
 $commodity = $_GET['commodity'];
 $price = $_GET['price'];
