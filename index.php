@@ -68,12 +68,12 @@
 
         <div class="form-group">
           <label for="login-username" class="placeholder-hidden">Username</label>
-          <input type="text" class="form-control" id="login-username" placeholder="Username" tabindex="1">
+          <input type="text" class="form-control" id="login-username" name="user_id" placeholder="Username" tabindex="1">
         </div> <!-- /.form-group -->
 
         <div class="form-group">
           <label for="login-password" class="placeholder-hidden">Password</label>
-          <input type="password" class="form-control" id="login-password" placeholder="Password" tabindex="2">
+          <input type="password" class="form-control" id="login-password" name="password" placeholder="Password" tabindex="2">
         </div> <!-- /.form-group -->
 
         <div class="form-group">
