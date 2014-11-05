@@ -60,11 +60,11 @@
 
             <div class="portlet-body">  
 
-              <form action="" data-validate="parsley" class="form parsley-form">
+              <form action="scripts/change_post_employee.php" data-validate="parsley" class="form parsley-form">
 
                 <div class="form-group">  
                   <label for="empname">Employee Name</label>
-                  <select id="empname" name="empname" class="form-control parsley-validated" data-required="true">
+                  <select id="empname" name="employee_id" class="form-control parsley-validated" data-required="true">
                     <option value="">Please Select</option>
                     <?php
                       require 'scripts/config_sql.php';
@@ -99,7 +99,7 @@
 
                 <div class="form-group hide-and-show">
                   <label for="passwd">Password</label>
-                  <input type="password" id="passwd" name="passwd" class="form-control parsley-validated" data-required="true">
+                  <input type="password" id="passwd" name="password" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">

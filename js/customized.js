@@ -12,9 +12,10 @@ function main() {
 			form_data = $(this).serializeArray();
 			console.log(form_data);
 			var main_array = [];
-			for (var i = 0; i < form_data.length-2; i++) {
+			for (var i = 0; i < form_data.length-2; i+=3) {
 				var x = {};
-				x[form_data[i].name] = form_data[i].value;
+				for(var j=0; j<3; j++)
+					x[form_data[i+j].name] = form_data[i+j].value;
 				main_array.push(x);
 			};
 			json_object = {};
@@ -23,7 +24,7 @@ function main() {
 			json_object[form_data[form_data.length - 1].name] = form_data[form_data.length - 1].value;
 			var json_string = JSON.stringify(json_object);
 			console.log(json_string);
-			$.get({'url': '../scripts/add_sell_log.php', 'data': json_string});
+			location.href = "scripts/add_sell_log.php?data="+json_string;
 			e.preventDefault();
 		}
 	);
@@ -44,7 +45,7 @@ function add_item_description(e) {
 	new_item_div = document.createElement('div');
 	new_item_div.id = "itemDiv" + item_no;
 	new_item_div.className = "itemDivs";
-	new_item_div.innerHTML = "<div class=\"form-group place-inline\"><label for=\"item"+item_no+"\">Item Name</label><select id=\"item"+item_no+"\" name=\"item"+item_no+"\" class=\"place-inline item form-control parsley-validated\" data-required=\"true\"><option value=\"Item no. 1\">Item no. 1</option></select></div> <!-- /.form-group --><div class=\"form-group place-inline\"><label for=\"qty"+item_no+"\">Quantity</label><input type=\"number\" id=\"qty"+item_no+"\" name=\"qty"+item_no+"\" class=\"place-inline form-control half-width parsley-validated\" data-required=\"true\"></div> <!-- /.form-group --><div class=\"form-group place-inline\"><label for=\"total_price"+item_no+"\">Price</label><input type=\"number\" id=\"price"+item_no+"\" name=\"total_price"+item_no+"\" step=\"0.01\" class=\"place-inline form-control half-width parsley-validated\" data-required=\"true\"></div> <!-- /.form-group --><button id=\"close"+item_no+"\" class=\"closebutton btn btn-danger place-inline\"><i class=\"fa fa-times\"></i></button><hr>";
+	new_item_div.innerHTML = "<div class=\"form-group place-inline\"><label for=\"item"+"\">Item Name</label><select id=\"item"+"\" name=\"item"+"\" class=\"place-inline item form-control parsley-validated\" data-required=\"true\"><option value=\"Item no. 1\">Item no. 1</option></select></div> <!-- /.form-group --><div class=\"form-group place-inline\"><label for=\"qty"+"\">Quantity</label><input type=\"number\" id=\"qty"+"\" name=\"qty"+"\" class=\"place-inline form-control half-width parsley-validated\" data-required=\"true\"></div> <!-- /.form-group --><div class=\"form-group place-inline\"><label for=\"total_price"+"\">Price</label><input type=\"number\" id=\"price"+"\" name=\"total_price"+"\" step=\"0.01\" class=\"place-inline form-control half-width parsley-validated\" data-required=\"true\"></div> <!-- /.form-group --><button id=\"close"+item_no+"\" class=\"closebutton btn btn-danger place-inline\"><i class=\"fa fa-times\"></i></button><hr>";
     main_item_div.appendChild(new_item_div);
     add_event();
 }
