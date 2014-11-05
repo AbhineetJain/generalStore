@@ -17,4 +17,12 @@ $(document).ready(
 					hide_divs();
 			}
 		);
+		$('#commodity_type').change(
+			function() {
+				if($('#commodity_type option:selected').val() == 'confectionery' || $('#commodity_type option:selected').val() == 'toiletries')
+					show_divs();
+				else
+					hide_divs();
+			}
+		);
 });

@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-  <title>Show Wholesalers &middot; Wholesalers &middot; Janta General Store</title>
+  <title>Show Employees &middot; Employees &middot; Janta General Store</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +54,7 @@
       <div class="portlet">
 
         <h3 class="portlet-title">
-          <u>Show Wholesalers</u>
+          <u>Show Employees</u>
         </h3>
 
         <div class="portlet-body">
@@ -62,15 +62,21 @@
           <table class="table table-striped table-bordered" id="table-1">
             <thead>
               <tr>
-                <th style="width: 30%">Wholesaler Name</th>
-                <th style="width: 20%">Transportation Cost</th>
+                <th style="width: 30%">Employee Name</th>
+                <th style="width: 20%">Salary</th>
+                <th style="width: 20%">Address</th>
+                <th style="width: 12%">Contact</th>
+                <th style="width: 18%">Date of Joining</th>
               </tr>
             </thead>
 
             <tfoot>
               <tr>
-                <th>Wholesaler Name</th>
-                <th>Transportation Cost</th>
+                <th>Employee Name</th>
+                <th>Salary</th>
+                <th>Address</th>
+                <th>Contact</th>
+                <th>Date of Joining</th>
               </tr>
             </tfoot>
           </table>
@@ -111,7 +117,7 @@
 <script src="./js/mvpready-admin.js"></script>
 
 <!-- Plugin JS -->
-<script src="./js/demos/wholesalers_table.js"></script>
+<script src="./js/demos/employee_table.js"></script>
 
 
 </body>

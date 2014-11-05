@@ -18,6 +18,10 @@
 
         <ul class="nav navbar-nav navbar-right">    
 
+          <li>
+            <a href="./home.php">Home</a>
+          </li> 
+
           <li class="dropdown navbar-profile">
             <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
               <span class="">Welcome, <?php session_start(); echo $_SESSION['user']['name']; ?> &nbsp;</span>
@@ -56,11 +60,6 @@
       </a>
 
       <nav class="collapse mainnav-collapse" role="navigation">
-
-        <form class="mainnav-form pull-right" role="search">
-          <input type="text" class="form-control input-md mainnav-search-query" placeholder="Search">
-          <button class="btn btn-sm mainnav-form-btn"><i class="fa fa-search"></i></button>
-        </form>
 
         <ul class="mainnav-menu">
 
@@ -103,9 +102,9 @@
               </li>
 
               <li>
-                <a href="#">
+                <a href="./buy_log_show.php">
                 <i class="fa fa-tasks"></i> 
-                &nbsp;&nbsp;Show Buy Log Summary
+                &nbsp;&nbsp;Show Buy Logs
                 </a>
               </li>
 
@@ -130,9 +129,9 @@
               </li>
 
               <li>
-                <a href="#">
+                <a href="./sell_log_show.php">
                 <i class="fa fa-tasks"></i> 
-                &nbsp;&nbsp;View Bill
+                &nbsp;&nbsp;View Bills
                 </a>
               </li>
 
@@ -149,16 +148,16 @@
 
             <ul class="dropdown-menu" role="menu">
               <li>
-                <a href="#">
-                <i class="fa fa-building-o"></i> 
-                &nbsp;&nbsp;Check Shop Status
+                <a href="commodities_add_entry.php">
+                <i class="fa fa-plus"></i> 
+                &nbsp;&nbsp;Add Entries
                 </a>
               </li>
 
               <li>
-                <a href="#">
-                <i class="fa fa-home"></i> 
-                &nbsp;&nbsp;Check Godown Status
+                <a href="commodities_show.php">
+                <i class="fa fa-tasks"></i> 
+                &nbsp;&nbsp;Show Commodities
                 </a>
               </li>
 
@@ -191,6 +190,13 @@
                 <a href="employee_change_posts.php">
                 <i class="fa fa-gear"></i> 
                 &nbsp;&nbsp;Change posts
+                </a>
+              </li>
+
+              <li>
+                <a href="employee_show.php">
+                <i class="fa fa-tasks"></i> 
+                &nbsp;&nbsp;Show Employees
                 </a>
               </li>
 

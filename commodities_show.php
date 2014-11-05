@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-  <title>Show Wholesalers &middot; Wholesalers &middot; Janta General Store</title>
+  <title>Show Commodities &middot; Commodities &middot; Janta General Store</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +54,7 @@
       <div class="portlet">
 
         <h3 class="portlet-title">
-          <u>Show Wholesalers</u>
+          <u>Show Commodities</u>
         </h3>
 
         <div class="portlet-body">
@@ -62,15 +62,29 @@
           <table class="table table-striped table-bordered" id="table-1">
             <thead>
               <tr>
-                <th style="width: 30%">Wholesaler Name</th>
-                <th style="width: 20%">Transportation Cost</th>
+                <th style="width: 13%">Commodity Name</th>
+                <th style="width: 13%">Description</th>
+                <th style="width: 13%">Price</th>
+                <th style="width: 10%">Quantity In Shop</th>
+                <th style="width: 10%">Quantity In Godown</th>
+                <th style="width: 13%">Location In Shop</th>
+                <th style="width: 12%">Type</th>
+                <th style="width: 8%">Batch No.</th>
+                <th style="width: 8%">Date of Expiry</th>
               </tr>
             </thead>
 
             <tfoot>
               <tr>
-                <th>Wholesaler Name</th>
-                <th>Transportation Cost</th>
+                <th>Commodity Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity In Shop</th>
+                <th>Quantity In Godown</th>
+                <th>Location In Shop</th>
+                <th>Type</th>
+                <th>Batch No.</th>
+                <th>Date of Expiry</th>
               </tr>
             </tfoot>
           </table>
@@ -111,7 +125,7 @@
 <script src="./js/mvpready-admin.js"></script>
 
 <!-- Plugin JS -->
-<script src="./js/demos/wholesalers_table.js"></script>
+<script src="./js/demos/buy_log_table.js"></script>
 
 
 </body>

@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-  <title>Show Wholesalers &middot; Wholesalers &middot; Janta General Store</title>
+  <title>View Bills &middot; Sell Log &middot; Janta General Store</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +54,7 @@
       <div class="portlet">
 
         <h3 class="portlet-title">
-          <u>Show Wholesalers</u>
+          <u>View Bills</u>
         </h3>
 
         <div class="portlet-body">
@@ -62,15 +62,17 @@
           <table class="table table-striped table-bordered" id="table-1">
             <thead>
               <tr>
-                <th style="width: 30%">Wholesaler Name</th>
-                <th style="width: 20%">Transportation Cost</th>
+                <th style="width: 30%">Item Name</th>
+                <th style="width: 20%">Quantity</th>
+                <th style="width: 12%">Price</th>
               </tr>
             </thead>
 
             <tfoot>
               <tr>
-                <th>Wholesaler Name</th>
-                <th>Transportation Cost</th>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
               </tr>
             </tfoot>
           </table>
@@ -111,7 +113,7 @@
 <script src="./js/mvpready-admin.js"></script>
 
 <!-- Plugin JS -->
-<script src="./js/demos/wholesalers_table.js"></script>
+<script src="./js/demos/sell_log_table.js"></script>
 
 
 </body>
