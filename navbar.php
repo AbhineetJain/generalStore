@@ -20,14 +20,14 @@
 
           <li class="dropdown navbar-profile">
             <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
-              <span class="">Welcome, User &nbsp;</span>
+              <span class="">Welcome, <?php session_start(); echo $_SESSION['user']['name']; ?> &nbsp;</span>
               <i class="fa fa-caret-down"></i>
             </a>
 
             <ul class="dropdown-menu" role="menu">
 
               <li>
-                <a href="./">
+                <a href="scripts/logout.php">
                   <i class="fa fa-sign-out"></i> 
                   &nbsp;&nbsp;Logout
                 </a>

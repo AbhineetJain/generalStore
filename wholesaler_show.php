@@ -44,7 +44,7 @@
 <div id="wrapper">
   
   <?php
-            include_once("navbar.html");
+            include_once("navbar.php");
   ?>
   
   <div class="content">

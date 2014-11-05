@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION['user']))
+  header("location: home.php");
+
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -64,7 +73,7 @@
 
       <h5>Please sign in to get access.</h5>
 
-      <form class="form account-form" method="POST" action="./home.php">
+      <form class="form account-form" method="get" action="scripts/check_login.php">
 
         <div class="form-group">
           <label for="login-username" class="placeholder-hidden">Username</label>
