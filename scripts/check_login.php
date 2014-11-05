@@ -18,8 +18,7 @@ if($sql->num_rows)
 	$_SESSION['isadmin'] = true;
 	$emp_id = $sql->fetch_assoc()['employee_id'];
 	$_SESSION['user'] = $mysqli->query("SELECT * FROM employees WHERE id='$emp_id' LIMIT 1")->fetch_assoc();
-	my_alert(json_encode($_SESSION['user']));
-//	header("location: ../home.php");
+	header("location: ../home.php");
 }
 else
 {
