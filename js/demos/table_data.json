@@ -1,0 +1,17 @@
+{
+  "id": -1,
+  "fieldErrors": [],
+  "sError": "",
+  "aaData": [
+    {
+      "DT_RowId": "row_1",
+      "wholesaler_name": "Khana Khazana",
+      "transportation_cost": "5.00"
+    },
+    {
+      "DT_RowId": "row_2",
+      "wholesaler_name": "KLPD Rocks",
+      "transportation_cost": "500.00"
+    }
+  ]
+}
