@@ -58,7 +58,7 @@
               <u>Add Entry</u>
             </h2>			
 
-            <div class="portlet-body">  
+            <div class="portlet-body">
 
               <form id="sell-log-form" action="" data-validate="parsley" class="form parsley-form">
 
@@ -148,5 +148,21 @@
 
 <script src="./js/customized.js"></script>
 
+<script type="text/javascript">
+
+<?php 
+
+  require 'scripts/config_sql.php';
+
+  $sql = $mysqli->query("SELECT * FROM commodities WHERE id>0");
+  $rows = array();
+
+  while($row = $sql->fetch_assoc())
+    $rows[] = $row;
+?>
+
+var commodities = <?php echo json_encode($rows); ?>;
+
+</script>
 </body>
 </html>
