@@ -19,4 +19,6 @@ foreach ($data->items as $item) {
 	$mysqli->query("INSERT INTO sold_items VALUES ('', '$sell_log_id', '$item_id', '$qty', '$total_price')");
 }
 
+header("location: ../sell_log_show.php");
+
 ?>

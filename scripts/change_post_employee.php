@@ -20,4 +20,6 @@ elseif($post == 'salesperson')
 elseif($post == 'cleaner')
 	$mysqli->query("INSERT INTO cleaners VALUES ('$employee_id')");
 
+header('location: ../employee_show.php');
+
 ?>

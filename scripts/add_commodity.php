@@ -24,4 +24,6 @@ elseif($type == 'Stationery')
 elseif($type == 'Miscellaneous')
 	$mysqli->query("INSERT INTO miscellaneous VALUES ('$commodity_id')");
 
+header('location: ../commodity_show.php');
+
 ?>

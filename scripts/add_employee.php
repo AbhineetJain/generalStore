@@ -10,6 +10,6 @@ $contact = @$_GET['contact'];
 
 $mysqli->query("INSERT INTO employees VALUES ('', '$name', '$salary', '$address', '$date_of_joining', '$contact', '')");
 
-//echo '<script>alert("Successfully Added Employee"); window.location.href="../";</script>';
+header('location: ../employee_show.php');
 
 ?>

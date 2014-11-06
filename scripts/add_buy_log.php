@@ -10,6 +10,6 @@ $quantity = $_GET['quantity'];
 
 $mysqli->query("INSERT INTO buy_log VALUES ('', '$wholesaler', '$date_of_purchase', '$commodity', '$price', '$quantity')");
 
-//header('location: /buy_log_add_entry.php');
+header('location: ../buy_log_show.php');
 
 ?>
