@@ -60,7 +60,7 @@
 
             <div class="portlet-body">  
 
-              <form action="scripts/add_wholesaler.php" data-validate="parsley" class="form parsley-form">
+              <form action="scripts/add_commodity.php" data-validate="parsley" class="form parsley-form">
 
                 <div class="form-group">  
                   <label for="name">Commodity Name</label>
@@ -69,7 +69,7 @@
 
                 <div class="form-group">  
                   <label for="type">Description</label>
-                  <input type="text" id="description" name="type" class="form-control parsley-validated" data-required="true">
+                  <input type="text" id="description" name="description" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
@@ -94,12 +94,12 @@
                 
                 <div class="form-group">  
                   <label for="commodity_type">Type</label>
-                  <select id="commodity_type" name="commodity_type" class="form-control parsley-validated" data-required="true">
+                  <select id="commodity_type" name="type" class="form-control parsley-validated" data-required="true">
                     <option value="">Please Select</option>
-                    <option value="confectionery">Confectionery</option>
-                    <option value="toiletries">Toiletries</option>
-                    <option value="stationery">Stationery</option>
-                    <option value="miscellaneous">Miscellaneous</option>
+                    <option value="Confectionery">Confectionery</option>
+                    <option value="Toiletries">Toiletries</option>
+                    <option value="Stationery">Stationery</option>
+                    <option value="Miscellaneous">Miscellaneous</option>
                   </select>
                 </div>
 

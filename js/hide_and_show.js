@@ -19,7 +19,7 @@ $(document).ready(
 		);
 		$('#commodity_type').change(
 			function() {
-				if($('#commodity_type option:selected').val() == 'confectionery' || $('#commodity_type option:selected').val() == 'toiletries')
+				if($('#commodity_type option:selected').val() == 'Confectionery' || $('#commodity_type option:selected').val() == 'Toiletries')
 					show_divs();
 				else
 					hide_divs();

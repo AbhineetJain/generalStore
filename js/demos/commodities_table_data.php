@@ -11,15 +11,34 @@ $count = 1;
 
 require '../../scripts/config_sql.php';
 
-$wholesalers = $mysqli->query("SELECT * FROM wholesalers WHERE id>0");
+$wholesalers = $mysqli->query("SELECT * FROM commodities WHERE id>0");
 
 while($wh = $wholesalers->fetch_assoc())
 {
-	$data['aaData'][$count-1] = array(
-		"DT_RowID" => "row_".$count,
-		"wholesaler_name" => $wh['name'],
-		"transportation_cost" => $wh['transportation_cost']
-	);
+	$wh['DT_RowID'] = "row_".$count;
+
+	$type = $wh['type'];
+	$table = "";
+
+	if($type == 'Confectionery')
+		$table = "confectioneries";
+	elseif($type == 'Toiletries')
+		$table = "toiletries";
+	
+	if($table == "")
+	{
+		$wh['batch_no'] = "";
+		$wh['date_of_expiry'] = "";
+	}
+	else
+	{
+		$commodity_id = $wh['id'];
+		$row = $mysqli->query("SELECT * FROM {$table} WHERE commodity_id='$commodity_id'")->fetch_assoc();
+		$wh['batch_no'] = $row['batch_no'];
+		$wh['date_of_expiry'] = $row['date_of_expiry'];
+	}
+
+	$data['aaData'][$count-1] = $wh;
 	$count++;
 }
 

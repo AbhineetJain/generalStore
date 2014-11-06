@@ -71,7 +71,7 @@
                 <th style="width: 12%">Type</th>
                 <th style="width: 8%">Batch No.</th>
                 <th style="width: 8%">Date of Expiry</th>
-              </tr>
+        </tr>
             </thead>
 
             <tfoot>
@@ -125,7 +125,7 @@
 <script src="./js/mvpready-admin.js"></script>
 
 <!-- Plugin JS -->
-<script src="./js/demos/buy_log_table.js"></script>
+<script src="./js/demos/commodities_table.js"></script>
 
 
 </body>
