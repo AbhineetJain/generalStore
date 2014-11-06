@@ -13,7 +13,7 @@ $mysqli->query("INSERT INTO sell_log VALUES ('', '$discount', '$billing_amount',
 $sell_log_id = $mysqli->insert_id;
 
 foreach ($data->items as $item) {
-	$item_id = $item->item_id;
+	$item_id = $item->item;
 	$qty = $item->qty;
 	$total_price = $item->total_price;
 	$mysqli->query("INSERT INTO sold_items VALUES ('', '$sell_log_id', '$item_id', '$qty', '$total_price')");
