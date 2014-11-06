@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 05, 2014 at 08:10 PM
+-- Generation Time: Nov 06, 2014 at 01:50 PM
 -- Server version: 5.5.40-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.5
 
@@ -50,7 +50,8 @@ INSERT INTO `buy_log` (`id`, `wholesaler_id`, `date_of_purchase`, `commodity`, `
 --
 
 CREATE TABLE IF NOT EXISTS `cleaners` (
-  `employee_id` int(11) NOT NULL
+  `employee_id` int(11) NOT NULL,
+  PRIMARY KEY (`employee_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -62,13 +63,22 @@ CREATE TABLE IF NOT EXISTS `cleaners` (
 CREATE TABLE IF NOT EXISTS `commodities` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(30) NOT NULL,
-  `type` varchar(30) NOT NULL,
+  `description` varchar(30) NOT NULL,
   `price` varchar(30) NOT NULL,
   `location_in_shop` varchar(30) NOT NULL,
   `qty_in_shop` int(11) NOT NULL,
   `qty_in_godown` int(11) NOT NULL,
+  `type` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `commodities`
+--
+
+INSERT INTO `commodities` (`id`, `name`, `description`, `price`, `location_in_shop`, `qty_in_shop`, `qty_in_godown`, `type`) VALUES
+(2, 'Colgate Toothpaste 100g', 'NONE', '50', 'IDK', 10, 20, 'Confectionery'),
+(3, 'Reezig Inc.', 'LOL', '0.03', 'fsdfs', 4, 7, 'Miscellaneous');
 
 -- --------------------------------------------------------
 
@@ -79,8 +89,16 @@ CREATE TABLE IF NOT EXISTS `commodities` (
 CREATE TABLE IF NOT EXISTS `confectioneries` (
   `commodity_id` int(11) NOT NULL,
   `batch_no` varchar(15) NOT NULL,
-  `date_of_expiry` varchar(15) NOT NULL
+  `date_of_expiry` varchar(15) NOT NULL,
+  PRIMARY KEY (`commodity_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `confectioneries`
+--
+
+INSERT INTO `confectioneries` (`commodity_id`, `batch_no`, `date_of_expiry`) VALUES
+(2, 'B-123456', '15/10/2015');
 
 -- --------------------------------------------------------
 
@@ -97,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `employees` (
   `contact` varchar(15) NOT NULL,
   `number_of_leaves` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `employees`
@@ -105,7 +123,8 @@ CREATE TABLE IF NOT EXISTS `employees` (
 
 INSERT INTO `employees` (`id`, `name`, `salary`, `address`, `date_of_joining`, `contact`, `number_of_leaves`) VALUES
 (2, 'Saksham Aggarwal', '10000', 'E-117', '1/11/2014', '7569156769', 0),
-(3, 'Abhineet Jain', '1000', 'E-128', '5/11/2014', '100', 0);
+(3, 'Abhineet Jain', '1000', 'E-214', '5/11/2014', '100', 0),
+(4, 'Tinu Sahay', '10', 'E-128', '5/11/2014', '-', 0);
 
 -- --------------------------------------------------------
 
@@ -136,8 +155,16 @@ INSERT INTO `managers` (`employee_id`, `educational_qualifications`, `user_id`, 
 --
 
 CREATE TABLE IF NOT EXISTS `miscellaneous` (
-  `commodity_id` int(11) NOT NULL
+  `commodity_id` int(11) NOT NULL,
+  PRIMARY KEY (`commodity_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `miscellaneous`
+--
+
+INSERT INTO `miscellaneous` (`commodity_id`) VALUES
+(3);
 
 -- --------------------------------------------------------
 
@@ -155,6 +182,13 @@ CREATE TABLE IF NOT EXISTS `salespersons` (
   KEY `employee_id` (`employee_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `salespersons`
+--
+
+INSERT INTO `salespersons` (`employee_id`, `educational_qualifications`, `user_id`, `password`) VALUES
+(3, 'Matric Pass(maybe not)', 'abhiineit', 'jain');
+
 -- --------------------------------------------------------
 
 --
@@ -167,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `sell_log` (
   `billing_amount` varchar(15) NOT NULL,
   `timestamp` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `sell_log`
@@ -175,7 +209,8 @@ CREATE TABLE IF NOT EXISTS `sell_log` (
 
 INSERT INTO `sell_log` (`id`, `discount`, `billing_amount`, `timestamp`) VALUES
 (1, '10', '504', '2014-11-05 18:46:50'),
-(2, '10', '504', '2014-11-05 18:48:07');
+(2, '10', '504', '2014-11-05 18:48:07'),
+(3, '10', '855', '2014-11-05 21:07:34');
 
 -- --------------------------------------------------------
 
@@ -190,7 +225,7 @@ CREATE TABLE IF NOT EXISTS `sold_items` (
   `qty` int(11) NOT NULL,
   `total_price` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `sold_items`
@@ -200,16 +235,19 @@ INSERT INTO `sold_items` (`id`, `sell_log_id`, `item_id`, `qty`, `total_price`) 
 (1, 1, 0, 5, '100'),
 (2, 1, 0, 3, '20'),
 (3, 2, 0, 5, '100'),
-(4, 2, 0, 3, '20');
+(4, 2, 0, 3, '20'),
+(5, 3, 0, 5, '100'),
+(6, 3, 0, 3, '150');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stationary`
+-- Table structure for table `stationery`
 --
 
-CREATE TABLE IF NOT EXISTS `stationary` (
-  `commodity_id` int(11) NOT NULL
+CREATE TABLE IF NOT EXISTS `stationery` (
+  `commodity_id` int(11) NOT NULL,
+  PRIMARY KEY (`commodity_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -221,7 +259,8 @@ CREATE TABLE IF NOT EXISTS `stationary` (
 CREATE TABLE IF NOT EXISTS `toiletries` (
   `commodity_id` int(11) NOT NULL,
   `batch_no` varchar(15) NOT NULL,
-  `date_of_expiry` varchar(15) NOT NULL
+  `date_of_expiry` varchar(15) NOT NULL,
+  PRIMARY KEY (`commodity_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -235,7 +274,7 @@ CREATE TABLE IF NOT EXISTS `wholesalers` (
   `name` varchar(30) NOT NULL,
   `transportation_cost` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `wholesalers`
