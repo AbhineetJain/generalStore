@@ -94,7 +94,7 @@
                 
                 <div class="form-group">
                   <label for="billing_amount">Total Billing Amount</label>
-                  <input type="number" id="bill" name="billing_amount" class="form-control half-width parsley-validated" data-required="true">
+                  <input type="number" id="bill" name="billing_amount" step="0.01" class="form-control half-width parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
