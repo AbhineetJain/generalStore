@@ -62,17 +62,18 @@
           <table class="table table-striped table-bordered" id="table-1">
             <thead>
               <tr>
-                <th style="width: 30%">Item Name</th>
-                <th style="width: 20%">Quantity</th>
-                <th style="width: 12%">Price</th>
+                <th style="width: 30%">Bill Number</th>
+                <th style="width: 20%">Timestamp</th>
+                <th style="width: 12%">Billing Amount</th>
+                <th style="width: 30%">CRUD</th>
               </tr>
             </thead>
 
             <tfoot>
               <tr>
-                <th>Item Name</th>
-                <th>Quantity</th>
-                <th>Price</th>
+                <th>Bill Number</th>
+                <th>Timestamp</th>
+                <th>Billing Amount</th>
               </tr>
             </tfoot>
           </table>

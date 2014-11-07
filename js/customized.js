@@ -101,6 +101,7 @@ function remove_item_description(e) {
 	child = document.getElementById('itemDiv'+e.target.id.split('close')[1]);
 	console.log(parent, child);
 	parent.removeChild(child);
+	change_bill();
 }
 
 window.addEventListener("load", main);
