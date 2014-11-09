@@ -56,7 +56,7 @@
         <h3 class="portlet-title">
           <u>View Bills</u>
         </h3>
-
+        
         <div class="portlet-body">
 
           <table class="table table-striped table-bordered" id="table-1">
@@ -65,7 +65,8 @@
                 <th style="width: 30%">Bill Number</th>
                 <th style="width: 20%">Timestamp</th>
                 <th style="width: 12%">Billing Amount</th>
-                <th style="width: 30%">CRUD</th>
+                <th style="width: 19%">Show</th>
+                <th style="width: 19%">Delete</th>
               </tr>
             </thead>
 
@@ -74,6 +75,8 @@
                 <th>Bill Number</th>
                 <th>Timestamp</th>
                 <th>Billing Amount</th>
+                <th>Show</th>
+                <th>Delete</th>
               </tr>
             </tfoot>
           </table>
@@ -90,7 +93,7 @@
 
 <footer class="footer">
   <div class="container">
-    <p class="pull-left">Copyright &copy; 2013 MVP Ready.</p>
+    <p class="pull-left">Copyright &copy; 2014 Janta General Store.</p>
   </div>
 </footer>
 
@@ -115,7 +118,6 @@
 
 <!-- Plugin JS -->
 <script src="./js/demos/sell_log_table.js"></script>
-
 
 </body>
 </html>

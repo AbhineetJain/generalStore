@@ -64,6 +64,8 @@
               <tr>
                 <th style="width: 30%">Wholesaler Name</th>
                 <th style="width: 20%">Transportation Cost</th>
+                <th style="width: 20%">Update</th>
+                <th style="width: 20%">Delete</th>
               </tr>
             </thead>
 
@@ -71,6 +73,8 @@
               <tr>
                 <th>Wholesaler Name</th>
                 <th>Transportation Cost</th>
+                <th>Update</th>
+                <th>Delete</th>
               </tr>
             </tfoot>
           </table>
@@ -87,7 +91,7 @@
 
 <footer class="footer">
   <div class="container">
-    <p class="pull-left">Copyright &copy; 2013 MVP Ready.</p>
+    <p class="pull-left">Copyright &copy; 2014 Janta General Store.</p>
   </div>
 </footer>
 

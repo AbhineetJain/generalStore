@@ -52,6 +52,10 @@
 .place-inline {
   display: inline;  
 }
+
+#error {
+  color: red;
+}
 /* ============================
   Custom CSS Ends
  * ============================ */

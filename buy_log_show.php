@@ -62,11 +62,13 @@
           <table class="table table-striped table-bordered" id="table-1">
             <thead>
               <tr>
-                <th style="width: 30%">Wholesaler Name</th>
+                <th style="width: 20%">Wholesaler Name</th>
                 <th style="width: 20%">Commodity</th>
-                <th style="width: 20%">Quantity</th>
+                <th style="width: 15%">Quantity</th>
                 <th style="width: 12%">Price</th>
-                <th style="width: 18%">Date of Purchase</th>
+                <th style="width: 13%">Date of Purchase</th>
+                <th style="width: 10%">Update</th>
+                <th style="width: 10%">Delete</th>
               </tr>
             </thead>
 
@@ -77,6 +79,8 @@
                 <th>Quantity</th>
                 <th>Price</th>
                 <th>Date of Purchase</th>
+                <th>Update</th>
+                <th>Delete</th>
               </tr>
             </tfoot>
           </table>
@@ -93,7 +97,7 @@
 
 <footer class="footer">
   <div class="container">
-    <p class="pull-left">Copyright &copy; 2013 MVP Ready.</p>
+    <p class="pull-left">Copyright &copy; 2014 Janta General Store.</p>
   </div>
 </footer>
 

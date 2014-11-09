@@ -9,5 +9,5 @@ $(function() {
     "fnInitComplete": function(oSettings, json) {
       $(this).parents ('.dataTables_wrapper').find ('.dataTables_filter input').prop ('placeholder', 'Table Search...').addClass ('form-control input-sm')
     }
-  })
+  });
 })

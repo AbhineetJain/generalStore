@@ -64,13 +64,15 @@
               <tr>
                 <th style="width: 13%">Commodity Name</th>
                 <th style="width: 13%">Description</th>
-                <th style="width: 13%">Price</th>
+                <th style="width: 10%">Price</th>
                 <th style="width: 10%">Quantity In Shop</th>
                 <th style="width: 10%">Quantity In Godown</th>
-                <th style="width: 13%">Location In Shop</th>
+                <th style="width: 12%">Location In Shop</th>
                 <th style="width: 12%">Type</th>
                 <th style="width: 8%">Batch No.</th>
                 <th style="width: 8%">Date of Expiry</th>
+                <th style="width: 5%">Update</th>
+                <th style="width: 5%">Delete</th>
         </tr>
             </thead>
 
@@ -85,6 +87,8 @@
                 <th>Type</th>
                 <th>Batch No.</th>
                 <th>Date of Expiry</th>
+                <th>Update</th>
+                <th>Delete</th>
               </tr>
             </tfoot>
           </table>
@@ -101,7 +105,7 @@
 
 <footer class="footer">
   <div class="container">
-    <p class="pull-left">Copyright &copy; 2013 MVP Ready.</p>
+    <p class="pull-left">Copyright &copy; 2014 Janta General Store.</p>
   </div>
 </footer>
 

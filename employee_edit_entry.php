@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-  <title>Add Entry &middot; Commodities &middot; Janta General Store</title>
+  <title>Update Entry &middot; Employees &middot; Janta General Store</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,66 +55,41 @@
           <div class="portlet">	    
 
             <h2 class="portlet-title">
-              <u>Add Entry</u>
+              <u>Update Entry</u>
             </h2>			
 
             <div class="portlet-body">  
 
-              <form action="scripts/add_commodity.php" data-validate="parsley" class="form parsley-form">
+              <form action="scripts/add_employee.php" data-validate="parsley" class="form parsley-form">
 
                 <div class="form-group">  
-                  <label for="name">Commodity Name</label>
-                  <input type="text" id="commname" name="name" class="form-control parsley-validated" data-required="true">  
+                  <label for="empname">Employee Name</label>
+                  <input type="text" id="empname" name="name" class="form-control parsley-validated" data-required="true">  
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">  
-                  <label for="type">Description</label>
-                  <input type="text" id="description" name="description" class="form-control parsley-validated" data-required="true">
+                  <label for="salary">Salary</label>
+                  <input type="number" id="salary" name="salary" step="0.01" class="form-control half-width parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
-                  <label for="price">Price</label>
-                  <input type="number" id="price" name="price" step="0.01" class="form-control half-width parsley-validated" data-required="true">
-                </div>
-                
-                <div class="form-group">
-                  <label for="qty_in_shop">Quantity In Shop</label>
-                  <input type="number" id="qty_in_shop" name="qty_in_shop" class="form-control half-width parsley-validated" data-required="true">
-                </div>
-                
-                <div class="form-group">
-                  <label for="qty_in_godown">Quantity In Godown</label>
-                  <input type="number" id="qty_in_godown" name="qty_in_godown" class="form-control half-width parsley-validated" data-required="true">
-                </div>
-                
-                <div class="form-group">  
-                  <label for="location_in_shop">Location In Shop</label>
-                  <input type="text" id="location" name="location_in_shop" class="form-control parsley-validated" data-required="true">
-                </div> <!-- /.form-group -->
-                
-                <div class="form-group">  
-                  <label for="commodity_type">Type</label>
-                  <select id="commodity_type" name="type" class="form-control parsley-validated" data-required="true">
-                    <option value="">Please Select</option>
-                    <option value="Confectionery">Confectionery</option>
-                    <option value="Toiletries">Toiletries</option>
-                    <option value="Stationery">Stationery</option>
-                    <option value="Miscellaneous">Miscellaneous</option>
-                  </select>
-                </div>
-
-                <div class="form-group hide-and-show">  
-                  <label for="batch_no">Batch No.</label>
-                  <input type="text" id="batch_no" name="batch_no" class="form-control parsley-validated">
-                </div> <!-- /.form-group -->
-
-                <div class="form-group hide-and-show">
-                  <label for="date_of_expiry">Date of Expiry</label>
-                  <input type="text" id="date_of_expiry" name="date_of_expiry" class="form-control parsley-validated">
+                  <label for="address">Address</label>
+                  <textarea data-required="true" data-minlength="5" name="address" id="address" cols="10" rows="2" class="form-control parsley-validated"></textarea>
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
-                  <button type="submit" class="btn btn-danger">Add</button>
+                  <label for="contact">Contact</label>
+                  <input type="text" id="contact" name="contact" class="form-control parsley-validated" data-required="true">
+                </div> <!-- /.form-group -->
+
+                <div class="form-group">
+                  <label for="doj">Date of Joining</label>
+                  <input type="date" id="doj" name="date_of_joining" class="form-control parsley-validated" data-required="true">
+                </div> <!-- /.form-group -->
+
+                
+                <div class="form-group">
+                  <button type="submit" class="btn btn-danger">Update</button>
                 </div> <!-- /.form-group -->
 
               </form>
@@ -161,8 +136,6 @@
 
 <!-- Plugin JS -->
 <script src="./js/demos/validation.js"></script>
-
-<script src="./js/hide_and_show.js"></script>
 
 
 </body>

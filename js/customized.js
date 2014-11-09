@@ -12,6 +12,11 @@ function main() {
 					change_price(e);
 				}
 			);
+			$('.item').change(
+				function(e) {
+					change_price(e);
+				}
+			);
 	});
 	add_event();
 	$('#sell-log-form').submit(

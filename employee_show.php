@@ -65,8 +65,10 @@
                 <th style="width: 30%">Employee Name</th>
                 <th style="width: 20%">Salary</th>
                 <th style="width: 20%">Address</th>
-                <th style="width: 12%">Contact</th>
-                <th style="width: 18%">Date of Joining</th>
+                <th style="width: 8%">Contact</th>
+                <th style="width: 10%">Date of Joining</th>
+                <th style="width: 6%">Update</th>
+                <th style="width: 6%">Delete</th>
               </tr>
             </thead>
 
@@ -77,6 +79,8 @@
                 <th>Address</th>
                 <th>Contact</th>
                 <th>Date of Joining</th>
+                <th>Update</th>
+                <th>Delete</th>
               </tr>
             </tfoot>
           </table>
@@ -93,7 +97,7 @@
 
 <footer class="footer">
   <div class="container">
-    <p class="pull-left">Copyright &copy; 2013 MVP Ready.</p>
+    <p class="pull-left">Copyright &copy; 2014 Janta General Store.</p>
   </div>
 </footer>
 

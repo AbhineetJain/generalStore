@@ -1,19 +1,10 @@
-<?php
-
-session_start();
-
-if(isset($_SESSION['user']))
-  header("location: home.php");
-
-?>
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-  <title>Login &middot; Janta General Store</title>
+  <title>Update Entry &middot; Wholesalers &middot; Janta General Store</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,63 +36,70 @@ if(isset($_SESSION['user']))
   <![endif]-->
 </head>
 
-<body class="account-bg">
+<body class=" ">
 
-  <header class="navbar navbar-inverse" role="banner">
+<div id="wrapper">
+
+  <?php
+            include_once("navbar.php");
+  ?>
+
+  <div class="content">
 
     <div class="container">
 
-      <div class="navbar-header">
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <i class="fa fa-cog"></i>
-        </button>
+      <div class="row">
 
-      <img src="./img/logo.png" alt="JGS" class="navbar-brand navbar-brand-img">
-    
-    </div> <!-- /.navbar-header -->
+        <div class="col-md-6 col-md-push-3 col-sm-8 col-sm-push-2 ">
+
+          <div class="portlet">	    
+
+            <h2 class="portlet-title">
+              <u>Update Entry</u>
+            </h2>			
+
+            <div class="portlet-body">  
+
+              <form action="scripts/add_wholesaler.php" data-validate="parsley" class="form parsley-form">
+
+                <div class="form-group">  
+                  <label for="name">Wholesaler Name</label>
+                  <input type="text" id="empname" name="name" class="form-control parsley-validated" data-required="true">  
+                </div> <!-- /.form-group -->
+
+                <div class="form-group">  
+                  <label for="transportation_cost">Transportation Cost</label>
+                  <input type="number" id="trans_cost" name="transportation_cost" step="0.01" class="form-control half-width parsley-validated" data-required="true">
+                </div> <!-- /.form-group -->
+                
+                <div class="form-group">
+                  <button type="submit" class="btn btn-danger">Update</button>
+                </div> <!-- /.form-group -->
+
+              </form>
+
+            </div> <!-- /.portlet-body -->
+
+          </div> <!-- /.portlet -->
+
+        </div> <!-- /.col -->
+
+      </div> <!-- /.row -->
 
     </div> <!-- /.container -->
 
-  </header>
-
-  <div class="account-wrapper">
-
-    <div class="account-body">
-
-      <h3>Welcome to Janta General Store.</h3>
-
-      <h5>Please sign in to get access.</h5>
-
-      <?php 
-        if ($_GET['failed'] == 1) {
-          echo("<h6 id=\"error\">Invalid Username or Password!</h6>");
-        }
-      ?>
-      <form class="form account-form" method="get" action="scripts/check_login.php">
-
-        <div class="form-group">
-          <label for="login-username" class="placeholder-hidden">Username</label>
-          <input type="text" class="form-control" id="login-username" name="user_id" placeholder="Username" tabindex="1">
-        </div> <!-- /.form-group -->
-
-        <div class="form-group">
-          <label for="login-password" class="placeholder-hidden">Password</label>
-          <input type="password" class="form-control" id="login-password" name="password" placeholder="Password" tabindex="2">
-        </div> <!-- /.form-group -->
-
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block btn-lg" tabindex="4">
-            Signin &nbsp; <i class="fa fa-play-circle"></i>
-          </button>
-        </div> <!-- /.form-group -->
-
-      </form>
 
 
-    </div> <!-- /.account-body -->
+  </div> <!-- .content -->
 
-  </div> <!-- /.account-wrapper -->
+</div> <!-- /#wrapper -->
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-left">Copyright &copy; 2014 Janta General Store.</p>
+  </div>
+</footer>
+
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -112,13 +110,16 @@ if(isset($_SESSION['user']))
 <!--[if lt IE 9]>
 <script src="./js/libs/excanvas.compiled.js"></script>
 <![endif]-->
+
+<!-- Plugin JS -->
+<script src="./js/plugins/parsley/parsley.js"></script>
+
 <!-- App JS -->
 <script src="./js/mvpready-core.js"></script>
 <script src="./js/mvpready-admin.js"></script>
 
 <!-- Plugin JS -->
-<script src="./js/mvpready-account.js"></script>
-
+<script src="./js/demos/validation.js"></script>
 
 
 </body>

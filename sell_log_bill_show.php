@@ -1,19 +1,10 @@
-<?php
-
-session_start();
-
-if(isset($_SESSION['user']))
-  header("location: home.php");
-
-?>
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-  <title>Login &middot; Janta General Store</title>
+  <title>View Bill Details &middot; Sell Log &middot; Janta General Store</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +21,9 @@ if(isset($_SESSION['user']))
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./css/bootstrap.min.css">
 
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="./js/plugins/dataTables/dataTables.bootstrap.css">
+
   <!-- App CSS -->
   <link rel="stylesheet" href="./css/mvpready-admin.css">
   <link rel="stylesheet" href="./css/mvpready-flat.css">
@@ -45,63 +39,68 @@ if(isset($_SESSION['user']))
   <![endif]-->
 </head>
 
-<body class="account-bg">
+<body class=" ">
 
-  <header class="navbar navbar-inverse" role="banner">
+<div id="wrapper">
+  
+  <?php
+            include_once("navbar.php");
+  ?>
+  
+  <div class="content">
 
     <div class="container">
 
-      <div class="navbar-header">
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <i class="fa fa-cog"></i>
-        </button>
+      <div class="portlet">
 
-      <img src="./img/logo.png" alt="JGS" class="navbar-brand navbar-brand-img">
-    
-    </div> <!-- /.navbar-header -->
+        <h3 class="portlet-title">
+          <u>View Bill Details</u>
+        </h3>
+        
+        <div class="portlet-body">
+
+          <h5 id="billno">Bill Number:</h4>
+          <h5 id="billtime">Timestamp:</h4>
+
+          <table class="table table-striped table-bordered" id="table-1">
+            <thead>
+              <tr>
+                <th style="width: 30%">Item Number</th>
+                <th style="width: 20%">Item Name</th>
+                <th style="width: 12%">Quantity</th>
+                <th style="width: 19%">Rate</th>
+                <th style="width: 19%">Total Price</th>
+              </tr>
+            </thead>
+
+            <tfoot>
+              <tr>
+                <th>Item Number</th>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Rate</th>
+                <th>Total Price</th>
+              </tr>
+            </tfoot>
+          </table>
+          <h5 id="billdiscount">Discount:</h4>
+          <h5 id="billamount">Total Billing Amount:</h4>
+        </div> <!-- /.portlet-body -->
+
+      </div> <!-- /.portlet -->
 
     </div> <!-- /.container -->
 
-  </header>
+  </div> <!-- .content -->
 
-  <div class="account-wrapper">
+</div> <!-- /#wrapper -->
 
-    <div class="account-body">
+<footer class="footer">
+  <div class="container">
+    <p class="pull-left">Copyright &copy; 2014 Janta General Store.</p>
+  </div>
+</footer>
 
-      <h3>Welcome to Janta General Store.</h3>
-
-      <h5>Please sign in to get access.</h5>
-
-      <?php 
-        if ($_GET['failed'] == 1) {
-          echo("<h6 id=\"error\">Invalid Username or Password!</h6>");
-        }
-      ?>
-      <form class="form account-form" method="get" action="scripts/check_login.php">
-
-        <div class="form-group">
-          <label for="login-username" class="placeholder-hidden">Username</label>
-          <input type="text" class="form-control" id="login-username" name="user_id" placeholder="Username" tabindex="1">
-        </div> <!-- /.form-group -->
-
-        <div class="form-group">
-          <label for="login-password" class="placeholder-hidden">Password</label>
-          <input type="password" class="form-control" id="login-password" name="password" placeholder="Password" tabindex="2">
-        </div> <!-- /.form-group -->
-
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block btn-lg" tabindex="4">
-            Signin &nbsp; <i class="fa fa-play-circle"></i>
-          </button>
-        </div> <!-- /.form-group -->
-
-      </form>
-
-
-    </div> <!-- /.account-body -->
-
-  </div> <!-- /.account-wrapper -->
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -112,14 +111,17 @@ if(isset($_SESSION['user']))
 <!--[if lt IE 9]>
 <script src="./js/libs/excanvas.compiled.js"></script>
 <![endif]-->
+
+<!-- Plugin JS -->
+<script src="./js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="./js/plugins/dataTables/dataTables.bootstrap.js"></script>
+
 <!-- App JS -->
 <script src="./js/mvpready-core.js"></script>
 <script src="./js/mvpready-admin.js"></script>
 
 <!-- Plugin JS -->
-<script src="./js/mvpready-account.js"></script>
-
-
+<script src="./js/demos/sell_log_table.js"></script>
 
 </body>
 </html>

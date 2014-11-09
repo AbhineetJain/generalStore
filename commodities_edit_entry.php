@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-  <title>Add Entry &middot; Commodities &middot; Janta General Store</title>
+  <title>Update Entry &middot; Commodities &middot; Janta General Store</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,7 +55,7 @@
           <div class="portlet">	    
 
             <h2 class="portlet-title">
-              <u>Add Entry</u>
+              <u>Update Entry</u>
             </h2>			
 
             <div class="portlet-body">  
@@ -114,7 +114,7 @@
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
-                  <button type="submit" class="btn btn-danger">Add</button>
+                  <button type="submit" class="btn btn-danger">Update</button>
                 </div> <!-- /.form-group -->
 
               </form>

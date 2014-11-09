@@ -161,13 +161,6 @@
                 </a>
               </li>
 
-              <li>
-                <a href="#">
-                <i class="fa fa-pencil-square-o"></i> 
-                &nbsp;&nbsp;Update Commodity
-                </a>
-              </li>
-
             </ul>
           </li> 
 
@@ -199,14 +192,7 @@
                 &nbsp;&nbsp;Show Employees
                 </a>
               </li>
-
-              <li>
-                <a href="#">
-                <i class="fa fa-pencil-square-o"></i> 
-                &nbsp;&nbsp;Update Employee
-                </a>
-              </li>
-
+              
             </ul>
           </li> 
 
