@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 06, 2014 at 01:50 PM
+-- Generation Time: Nov 10, 2014 at 09:37 PM
 -- Server version: 5.5.40-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.5
 
@@ -34,14 +34,14 @@ CREATE TABLE IF NOT EXISTS `buy_log` (
   `price` varchar(15) NOT NULL,
   `quantity` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `buy_log`
 --
 
 INSERT INTO `buy_log` (`id`, `wholesaler_id`, `date_of_purchase`, `commodity`, `price`, `quantity`) VALUES
-(1, 1, '11/1/2014', 'Sasti Raand', '100', 6);
+(3, 1, '10/11/2014', 'Stylish Paan', '100', 16);
 
 -- --------------------------------------------------------
 
@@ -70,15 +70,18 @@ CREATE TABLE IF NOT EXISTS `commodities` (
   `qty_in_godown` int(11) NOT NULL,
   `type` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `commodities`
 --
 
 INSERT INTO `commodities` (`id`, `name`, `description`, `price`, `location_in_shop`, `qty_in_shop`, `qty_in_godown`, `type`) VALUES
-(2, 'Colgate Toothpaste 100g', 'NONE', '50', 'IDK', 10, 20, 'Confectionery'),
-(3, 'Reezig Inc.', 'LOL', '0.03', 'fsdfs', 4, 7, 'Miscellaneous');
+(2, 'Colgate Toothpaste 100g', 'NONE', '50', 'I know it', 10, 20, 'Confectionery'),
+(3, 'Reezig Inc.', 'LOL', '0.03', 'fsdfs', 4, 7, 'Miscellaneous'),
+(7, 'Sasta Paan', 'Cheap Good Paan', '10', 'Nowhere :P', 50, 150, 'Miscellaneous'),
+(8, 'Add Gel', 'Pen', '10', 'Cupboard', 5, 5, 'Stationery'),
+(9, 'Good Day Cookies', 'Biscuits', '50', 'Showcase 2', 5, 5, 'Confectionery');
 
 -- --------------------------------------------------------
 
@@ -98,7 +101,8 @@ CREATE TABLE IF NOT EXISTS `confectioneries` (
 --
 
 INSERT INTO `confectioneries` (`commodity_id`, `batch_no`, `date_of_expiry`) VALUES
-(2, 'B-123456', '15/10/2015');
+(2, 'B-123456', '15/10/2015'),
+(9, '1245', '5/12/1995');
 
 -- --------------------------------------------------------
 
@@ -122,9 +126,8 @@ CREATE TABLE IF NOT EXISTS `employees` (
 --
 
 INSERT INTO `employees` (`id`, `name`, `salary`, `address`, `date_of_joining`, `contact`, `number_of_leaves`) VALUES
-(2, 'Saksham Aggarwal', '10000', 'E-117', '1/11/2014', '7569156769', 0),
-(3, 'Abhineet Jain', '1000', 'E-214', '5/11/2014', '100', 0),
-(4, 'Tinu Sahay', '10', 'E-128', '5/11/2014', '-', 0);
+(2, 'Saksham Aggarwal', '10000', 'E-117', '5/11/2014', '7569156769', 3),
+(3, 'Abhineet Jain', '1000', 'E-214', '5/11/2014', '100', 5);
 
 -- --------------------------------------------------------
 
@@ -164,7 +167,8 @@ CREATE TABLE IF NOT EXISTS `miscellaneous` (
 --
 
 INSERT INTO `miscellaneous` (`commodity_id`) VALUES
-(3);
+(3),
+(7);
 
 -- --------------------------------------------------------
 
@@ -181,13 +185,6 @@ CREATE TABLE IF NOT EXISTS `salespersons` (
   UNIQUE KEY `employee_id_2` (`employee_id`),
   KEY `employee_id` (`employee_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `salespersons`
---
-
-INSERT INTO `salespersons` (`employee_id`, `educational_qualifications`, `user_id`, `password`) VALUES
-(3, 'Matric Pass(maybe not)', 'abhiineit', 'jain');
 
 -- --------------------------------------------------------
 
@@ -208,9 +205,8 @@ CREATE TABLE IF NOT EXISTS `sell_log` (
 --
 
 INSERT INTO `sell_log` (`id`, `discount`, `billing_amount`, `timestamp`) VALUES
-(1, '10', '504', '2014-11-05 18:46:50'),
-(2, '10', '504', '2014-11-05 18:48:07'),
-(3, '10', '855', '2014-11-05 21:07:34');
+(2, '5', '95.03', '2014-11-06 23:58:51'),
+(3, '5', '95.03', '2014-11-06 23:59:46');
 
 -- --------------------------------------------------------
 
@@ -232,12 +228,10 @@ CREATE TABLE IF NOT EXISTS `sold_items` (
 --
 
 INSERT INTO `sold_items` (`id`, `sell_log_id`, `item_id`, `qty`, `total_price`) VALUES
-(1, 1, 0, 5, '100'),
-(2, 1, 0, 3, '20'),
-(3, 2, 0, 5, '100'),
-(4, 2, 0, 3, '20'),
-(5, 3, 0, 5, '100'),
-(6, 3, 0, 3, '150');
+(3, 2, 2, 2, '100'),
+(4, 2, 3, 1, '0.03'),
+(5, 3, 2, 2, '100'),
+(6, 3, 3, 1, '0.03');
 
 -- --------------------------------------------------------
 
@@ -249,6 +243,13 @@ CREATE TABLE IF NOT EXISTS `stationery` (
   `commodity_id` int(11) NOT NULL,
   PRIMARY KEY (`commodity_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `stationery`
+--
+
+INSERT INTO `stationery` (`commodity_id`) VALUES
+(8);
 
 -- --------------------------------------------------------
 
@@ -281,9 +282,7 @@ CREATE TABLE IF NOT EXISTS `wholesalers` (
 --
 
 INSERT INTO `wholesalers` (`id`, `name`, `transportation_cost`) VALUES
-(1, 'AbhineetRandiKhaana', '5.5'),
-(2, 'Nirmal Baba', '10'),
-(4, 'Reezig Inc.', '1.25');
+(1, 'Abhineet Paan Bhandar', '11');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

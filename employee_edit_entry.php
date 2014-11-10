@@ -152,6 +152,9 @@ $data_row = $mysqli->query("SELECT * FROM employees WHERE id='$id' LIMIT 1")->fe
 
 <!-- Plugin JS -->
 <script src="./js/demos/validation.js"></script>
+<script>
+$("#nav_employee").addClass("active")
+</script>
 
 
 </body>

@@ -130,7 +130,9 @@
 
 <!-- Plugin JS -->
 <script src="./js/demos/commodities_table.js"></script>
-
+<script>
+$("#nav_commodities").addClass("active")
+</script>
 
 </body>
 </html>

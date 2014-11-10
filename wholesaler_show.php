@@ -117,6 +117,9 @@
 <!-- Plugin JS -->
 <script src="./js/demos/wholesalers_table.js"></script>
 
+<script>
+$("#nav_wholesalers").addClass("active")
+</script>
 
 </body>
 </html>

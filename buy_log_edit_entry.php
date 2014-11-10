@@ -161,7 +161,9 @@ $data_row = $mysqli->query("SELECT * FROM buy_log WHERE id='$id' LIMIT 1")->fetc
 
 <!-- Plugin JS -->
 <script src="./js/demos/validation.js"></script>
-
+<script>
+$("#nav_buy_log").addClass("active")
+</script>
 
 </body>
 </html>

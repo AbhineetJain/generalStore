@@ -136,7 +136,9 @@
 
 <!-- Plugin JS -->
 <script src="./js/demos/validation.js"></script>
-
+<script>
+$("#nav_employee").addClass("active")
+</script>
 
 </body>
 </html>

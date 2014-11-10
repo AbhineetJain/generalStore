@@ -118,6 +118,9 @@
 
 <!-- Plugin JS -->
 <script src="./js/demos/sell_log_table.js"></script>
+<script>
+$("#nav_sell_log").addClass("active")
+</script>
 
 </body>
 </html>

@@ -130,7 +130,9 @@ $data_row = $mysqli->query("SELECT * FROM wholesalers WHERE id='$id' LIMIT 1")->
 
 <!-- Plugin JS -->
 <script src="./js/demos/validation.js"></script>
-
+<script>
+$("#nav_wholesalers").addClass("active")
+</script>
 
 </body>
 </html>

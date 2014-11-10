@@ -124,7 +124,9 @@
 
 <!-- Plugin JS -->
 <script src="./js/demos/employee_table.js"></script>
-
+<script>
+$("#nav_employee").addClass("active")
+</script>
 
 </body>
 </html>

@@ -164,5 +164,8 @@
 var commodities = <?php echo json_encode($rows); ?>;
 
 </script>
+<script>
+$("#nav_sell_log").addClass("active")
+</script>
 </body>
 </html>

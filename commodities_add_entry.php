@@ -163,7 +163,9 @@
 <script src="./js/demos/validation.js"></script>
 
 <script src="./js/hide_and_show_comm.js"></script>
-
+<script>
+$("#nav_commodities").addClass("active")
+</script>
 
 </body>
 </html>

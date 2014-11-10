@@ -123,6 +123,9 @@
 <!-- Plugin JS -->
 <script src="./js/demos/buy_log_table.js"></script>
 
+<script>
+$("#nav_buy_log").addClass("active")
+</script>
 
 </body>
 </html>

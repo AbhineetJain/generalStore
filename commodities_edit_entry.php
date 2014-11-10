@@ -173,7 +173,9 @@ $data_row = $mysqli->query("SELECT * FROM commodities WHERE id='$id' LIMIT 1")->
 <script src="./js/demos/validation.js"></script>
 
 <script src="./js/hide_and_show.js"></script>
-
+<script>
+$("#nav_commodities").addClass("active")
+</script>
 
 </body>
 </html>

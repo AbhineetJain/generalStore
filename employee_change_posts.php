@@ -153,6 +153,8 @@
 <script src="./js/demos/validation.js"></script>
 
 <script src="./js/hide_and_show.js"></script>
-
+<script>
+$("#nav_employee").addClass("active")
+</script>
 </body>
 </html>

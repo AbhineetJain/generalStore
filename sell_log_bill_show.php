@@ -127,6 +127,9 @@ $row = $mysqli->query("SELECT * FROM sell_log WHERE id='$id' LIMIT 1")->fetch_as
 <script>
 <?php include('./js/demos/sold_items_table.php'); ?>
 </script>
+<script>
+$("#nav_sell_log").addClass("active")
+</script>
 
 </body>
 </html>
