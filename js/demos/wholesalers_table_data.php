@@ -15,11 +15,11 @@ $wholesalers = $mysqli->query("SELECT * FROM wholesalers WHERE id>0");
 
 while($wh = $wholesalers->fetch_assoc())
 {
-	$data['aaData'][$count-1] = array(
-		"DT_RowID" => "row_".$count,
-		"wholesaler_name" => $wh['name'],
-		"transportation_cost" => $wh['transportation_cost']
-	);
+	$wh['wholesaler_name'] = $wh['name'];
+	$wh['DT_RowID'] = "row_".$count;
+	$wh['update'] = '<a href="./wholesaler_edit_entry.php?id='.$wh['id'].'">Update</a>';
+	$wh['delete'] = '<a href="scripts/delete.php?table=wholesalers&id='.$wh['id'].'">Delete</a>';
+	$data['aaData'][$count-1] = $wh;
 	$count++;
 }
 

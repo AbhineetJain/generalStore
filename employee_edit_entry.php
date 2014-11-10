@@ -60,31 +60,47 @@
 
             <div class="portlet-body">  
 
-              <form action="scripts/add_employee.php" data-validate="parsley" class="form parsley-form">
+              <form action="scripts/update_employee.php" data-validate="parsley" class="form parsley-form">
+<?php
 
+require 'scripts/config_sql.php';
+
+$id = @$_GET['id'];
+
+$data_row = $mysqli->query("SELECT * FROM employees WHERE id='$id' LIMIT 1")->fetch_assoc();
+
+?>
+                
+                <input hidden value="<?php echo $data_row['id'];?>" type="text" name="id">
+                
                 <div class="form-group">  
                   <label for="empname">Employee Name</label>
-                  <input type="text" id="empname" name="name" class="form-control parsley-validated" data-required="true">  
+                  <input value="<?php echo $data_row['name'];?>" type="text" id="empname" name="name" class="form-control parsley-validated" data-required="true">  
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">  
                   <label for="salary">Salary</label>
-                  <input type="number" id="salary" name="salary" step="0.01" class="form-control half-width parsley-validated" data-required="true">
+                  <input value="<?php echo $data_row['salary'];?>" type="number" id="salary" name="salary" step="0.01" class="form-control half-width parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
                   <label for="address">Address</label>
-                  <textarea data-required="true" data-minlength="5" name="address" id="address" cols="10" rows="2" class="form-control parsley-validated"></textarea>
+                  <textarea data-required="true" data-minlength="5" name="address" id="address" cols="10" rows="2" class="form-control parsley-validated"><?php echo $data_row['address'];?></textarea>
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
                   <label for="contact">Contact</label>
-                  <input type="text" id="contact" name="contact" class="form-control parsley-validated" data-required="true">
+                  <input value="<?php echo $data_row['contact'];?>" type="text" id="contact" name="contact" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
                   <label for="doj">Date of Joining</label>
-                  <input type="date" id="doj" name="date_of_joining" class="form-control parsley-validated" data-required="true">
+                  <input value="<?php echo $data_row['date_of_joining'];?>" type="date" id="doj" name="date_of_joining" class="form-control parsley-validated" data-required="true">
+                </div> <!-- /.form-group -->
+
+                <div class="form-group">
+                  <label for="doj">Number of Leaves</label>
+                  <input value="<?php echo $data_row['number_of_leaves'];?>" type="date" id="doj" name="number_of_leaves" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 

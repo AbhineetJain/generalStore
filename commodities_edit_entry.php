@@ -60,38 +60,48 @@
 
             <div class="portlet-body">  
 
-              <form action="scripts/add_commodity.php" data-validate="parsley" class="form parsley-form">
+              <form action="scripts/update_commodity.php" data-validate="parsley" class="form parsley-form">
+<?php
 
+require 'scripts/config_sql.php';
+
+$id = @$_GET['id'];
+
+$data_row = $mysqli->query("SELECT * FROM commodities WHERE id='$id' LIMIT 1")->fetch_assoc();
+
+?>
+                <input hidden value="<?php echo $data_row['id'];?>" type="text" name="id">
+                
                 <div class="form-group">  
                   <label for="name">Commodity Name</label>
-                  <input type="text" id="commname" name="name" class="form-control parsley-validated" data-required="true">  
+                  <input value="<?php echo $data_row['name'];?>" type="text" id="commname" name="name" class="form-control parsley-validated" data-required="true">  
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">  
                   <label for="type">Description</label>
-                  <input type="text" id="description" name="description" class="form-control parsley-validated" data-required="true">
+                  <input value="<?php echo $data_row['description'];?>" type="text" id="description" name="description" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
                   <label for="price">Price</label>
-                  <input type="number" id="price" name="price" step="0.01" class="form-control half-width parsley-validated" data-required="true">
+                  <input value="<?php echo $data_row['price'];?>" type="number" id="price" name="price" step="0.01" class="form-control half-width parsley-validated" data-required="true">
                 </div>
                 
                 <div class="form-group">
                   <label for="qty_in_shop">Quantity In Shop</label>
-                  <input type="number" id="qty_in_shop" name="qty_in_shop" class="form-control half-width parsley-validated" data-required="true">
+                  <input value="<?php echo $data_row['qty_in_shop'];?>" type="number" id="qty_in_shop" name="qty_in_shop" class="form-control half-width parsley-validated" data-required="true">
                 </div>
                 
                 <div class="form-group">
                   <label for="qty_in_godown">Quantity In Godown</label>
-                  <input type="number" id="qty_in_godown" name="qty_in_godown" class="form-control half-width parsley-validated" data-required="true">
+                  <input value="<?php echo $data_row['qty_in_godown'];?>" type="number" id="qty_in_godown" name="qty_in_godown" class="form-control half-width parsley-validated" data-required="true">
                 </div>
                 
                 <div class="form-group">  
                   <label for="location_in_shop">Location In Shop</label>
-                  <input type="text" id="location" name="location_in_shop" class="form-control parsley-validated" data-required="true">
+                  <input value="<?php echo $data_row['location_in_shop'];?>" type="text" id="location" name="location_in_shop" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
-                
+<!--                
                 <div class="form-group">  
                   <label for="commodity_type">Type</label>
                   <select id="commodity_type" name="type" class="form-control parsley-validated" data-required="true">
@@ -106,13 +116,13 @@
                 <div class="form-group hide-and-show">  
                   <label for="batch_no">Batch No.</label>
                   <input type="text" id="batch_no" name="batch_no" class="form-control parsley-validated">
-                </div> <!-- /.form-group -->
+                </div>
 
                 <div class="form-group hide-and-show">
                   <label for="date_of_expiry">Date of Expiry</label>
                   <input type="text" id="date_of_expiry" name="date_of_expiry" class="form-control parsley-validated">
-                </div> <!-- /.form-group -->
-
+                </div>
+-->
                 <div class="form-group">
                   <button type="submit" class="btn btn-danger">Update</button>
                 </div> <!-- /.form-group -->

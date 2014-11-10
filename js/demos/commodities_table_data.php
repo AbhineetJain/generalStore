@@ -38,6 +38,8 @@ while($wh = $wholesalers->fetch_assoc())
 		$wh['date_of_expiry'] = $row['date_of_expiry'];
 	}
 
+	$wh['update'] = '<a href="./commodities_edit_entry.php?id='.$wh['id'].'">Update</a>';
+	$wh['delete'] = '<a href="scripts/delete.php?table=commodities&id='.$wh['id'].'">Delete</a>';
 	$data['aaData'][$count-1] = $wh;
 	$count++;
 }

@@ -67,6 +67,7 @@
                 <th style="width: 20%">Address</th>
                 <th style="width: 8%">Contact</th>
                 <th style="width: 10%">Date of Joining</th>
+                <th style="width: 10%">Number of Leaves</th>
                 <th style="width: 6%">Update</th>
                 <th style="width: 6%">Delete</th>
               </tr>
@@ -79,6 +80,7 @@
                 <th>Address</th>
                 <th>Contact</th>
                 <th>Date of Joining</th>
+                <th>Number of Leaves</th>
                 <th>Update</th>
                 <th>Delete</th>
               </tr>

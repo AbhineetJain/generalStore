@@ -60,16 +60,26 @@
 
             <div class="portlet-body">  
 
-              <form action="scripts/add_wholesaler.php" data-validate="parsley" class="form parsley-form">
+              <form action="scripts/update_wholesaler.php" data-validate="parsley" class="form parsley-form">
+<?php
+
+require 'scripts/config_sql.php';
+
+$id = @$_GET['id'];
+
+$data_row = $mysqli->query("SELECT * FROM wholesalers WHERE id='$id' LIMIT 1")->fetch_assoc();
+
+?>
+                <input hidden value="<?php echo $data_row['id'];?>" type="text" name="id">
 
                 <div class="form-group">  
                   <label for="name">Wholesaler Name</label>
-                  <input type="text" id="empname" name="name" class="form-control parsley-validated" data-required="true">  
+                  <input value="<?php echo $data_row['name'];?>" type="text" id="empname" name="name" class="form-control parsley-validated" data-required="true">  
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">  
                   <label for="transportation_cost">Transportation Cost</label>
-                  <input type="number" id="trans_cost" name="transportation_cost" step="0.01" class="form-control half-width parsley-validated" data-required="true">
+                  <input value="<?php echo $data_row['transportation_cost'];?>" type="number" id="trans_cost" name="transportation_cost" step="0.01" class="form-control half-width parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
                 
                 <div class="form-group">

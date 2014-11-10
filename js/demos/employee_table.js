@@ -6,7 +6,10 @@ $(function() {
       { "mData": "salary" },
       { "mData": "address" },
       { "mData": "contact" },
-      { "mData": "date_of_joining" }
+      { "mData": "date_of_joining" },
+      { "mData": "number_of_leaves" },
+      { "mData": "update" },
+      { "mData": "delete" },
     ],
     "fnInitComplete": function(oSettings, json) {
       $(this).parents ('.dataTables_wrapper').find ('.dataTables_filter input').prop ('placeholder', 'Table Search...').addClass ('form-control input-sm')

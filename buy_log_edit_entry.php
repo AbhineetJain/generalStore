@@ -52,16 +52,24 @@
 
         <div class="col-md-6 col-md-push-3 col-sm-8 col-sm-push-2 ">
 
-          <div class="portlet">	    
+          <div class="portlet">        
 
             <h2 class="portlet-title">
               <u>Update Entry</u>
-            </h2>			
+            </h2>
 
             <div class="portlet-body">  
 
-              <form action="./scripts/add_buy_log.php" method="get" data-validate="parsley" class="form parsley-form">
+              <form action="./scripts/update_buy_log.php" method="get" data-validate="parsley" class="form parsley-form">
+<?php
 
+require 'scripts/config_sql.php';
+
+$id = @$_GET['id'];
+
+$data_row = $mysqli->query("SELECT * FROM buy_log WHERE id='$id' LIMIT 1")->fetch_assoc();
+
+?>
                 <div class="form-group">  
                   <label for="wholesalerSelect">Wholesaler Name</label>
                   <select id="wholesalerSelect" name="wholesaler_id" class="form-control parsley-validated" data-required="true">
@@ -72,29 +80,36 @@
                       $sql = $mysqli->query("SELECT * from wholesalers WHERE id>0");
 
                       while($row = $sql->fetch_assoc())
-                        echo '<option value="'.$row['id'].'">'.$row['name'].'</option>';
+                      {
+                        echo '<option value="'.$row['id'].'"';
+                        if($row['id']==$data_row['wholesaler_id'])
+                            echo ' selected';
+                        echo '>'.$row['name'].'</option>';
+                      }
                     ?>
                   </select>
                 </div> <!-- /.form-group -->
+                
+                <input hidden value="<?php echo $data_row['id'];?>" type="text" name="id">
 
                 <div class="form-group">  
                   <label for="commodity">Commodity</label>
-                  <input type="text" id="commodity" name="commodity" class="form-control parsley-validated" data-required="true">
+                  <input value="<?php echo $data_row['commodity'];?>" type="text" id="commodity" name="commodity" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
                   <label for="qty">Quantity</label>
-                  <input type="number" id="qty" name="quantity" class="form-control parsley-validated" data-required="true">
+                  <input value="<?php echo $data_row['quantity'];?>" type="number" id="qty" name="quantity" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
                   <label for="priceRs">Price</label>
-                  <input type="number" id="price" name="price" step="0.01" class="form-control half-width parsley-validated" data-required="true">
+                  <input value="<?php echo $data_row['price'];?>" type="number" id="price" name="price" step="0.01" class="form-control half-width parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 <div class="form-group">
                   <label for="dop">Date of Purchase</label>
-                  <input type="text" id="dop" name="date_of_purchase" class="form-control parsley-validated" data-required="true">
+                  <input value="<?php echo $data_row['date_of_purchase'];?>" type="text" id="dop" name="date_of_purchase" class="form-control parsley-validated" data-required="true">
                 </div> <!-- /.form-group -->
 
                 
