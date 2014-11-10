@@ -162,7 +162,7 @@
 <!-- Plugin JS -->
 <script src="./js/demos/validation.js"></script>
 
-<script src="./js/hide_and_show.js"></script>
+<script src="./js/hide_and_show_comm.js"></script>
 
 
 </body>

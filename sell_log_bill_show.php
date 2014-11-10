@@ -56,35 +56,38 @@
         <h3 class="portlet-title">
           <u>View Bill Details</u>
         </h3>
-        
+<?php
+
+require 'scripts/config_sql.php';
+
+$id = $_GET['id'];
+$row = $mysqli->query("SELECT * FROM sell_log WHERE id='$id' LIMIT 1")->fetch_assoc();
+
+?>
         <div class="portlet-body">
 
-          <h5 id="billno">Bill Number:</h4>
-          <h5 id="billtime">Timestamp:</h4>
+          <h5 id="billno">Bill Number: <?php echo $row['id']; ?></h4>
+          <h5 id="billtime">Timestamp: <?php echo $row['timestamp']; ?></h4>
 
           <table class="table table-striped table-bordered" id="table-1">
             <thead>
               <tr>
-                <th style="width: 30%">Item Number</th>
                 <th style="width: 20%">Item Name</th>
                 <th style="width: 12%">Quantity</th>
-                <th style="width: 19%">Rate</th>
                 <th style="width: 19%">Total Price</th>
               </tr>
             </thead>
 
             <tfoot>
               <tr>
-                <th>Item Number</th>
                 <th>Item Name</th>
                 <th>Quantity</th>
-                <th>Rate</th>
                 <th>Total Price</th>
               </tr>
             </tfoot>
           </table>
-          <h5 id="billdiscount">Discount:</h4>
-          <h5 id="billamount">Total Billing Amount:</h4>
+          <h5 id="billdiscount">Discount: <?php echo $row['discount']; ?>%</h4>
+          <h5 id="billamount">Total Billing Amount: <?php echo $row['billing_amount']; ?></h4>
         </div> <!-- /.portlet-body -->
 
       </div> <!-- /.portlet -->
@@ -121,7 +124,9 @@
 <script src="./js/mvpready-admin.js"></script>
 
 <!-- Plugin JS -->
-<script src="./js/demos/sell_log_table.js"></script>
+<script>
+<?php include('./js/demos/sold_items_table.php'); ?>
+</script>
 
 </body>
 </html>

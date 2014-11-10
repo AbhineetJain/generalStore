@@ -63,7 +63,7 @@
 
         <ul class="mainnav-menu">
 
-          <li class="dropdown active">
+          <li class="dropdown" id="nav_wholesalers">
             <a href="./wholesaler_add_entry.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
             Wholesalers
             <i class="mainnav-caret"></i>
@@ -87,7 +87,7 @@
             </ul>
           </li>
 
-          <li class="dropdown">
+          <li class="dropdown" id="nav_buy_log">
           	<a href="./buy_log_add_entry.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
           	Buy Log
           	<i class="mainnav-caret"></i>
@@ -112,7 +112,7 @@
           </li>
 
 
-          <li class="dropdown ">
+          <li class="dropdown " id="nav_sell_log">
 
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
             Sell Log
@@ -139,7 +139,7 @@
           </li>
 
 
-          <li class="dropdown ">
+          <li class="dropdown " id="nav_commodities">
 
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
             Commodities
@@ -164,7 +164,7 @@
             </ul>
           </li> 
 
-          <li class="dropdown ">
+          <li class="dropdown " id="nav_employee">
 
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
             Employees

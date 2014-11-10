@@ -26,7 +26,7 @@ function show_divs(flag) {
 
 $(document).ready(
 	function() {
-		hide_divs(1);
+		hide_divs(0);
 		$('#post').change(
 			function() {
 				if($('#post option:selected').val() == 'manager' || $('#post option:selected').val() == 'salesperson')

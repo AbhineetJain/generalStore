@@ -147,6 +147,9 @@
 <!-- Plugin JS -->
 <script src="./js/demos/validation.js"></script>
 
+<script>
+$("#nav_buy_log").addClass("active")
+</script>
 
 </body>
 </html>
