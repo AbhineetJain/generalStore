@@ -12,7 +12,7 @@ if(isLoggedIn())
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-  <title>Login &middot; Janta General Store</title>
+  <title>Sign In &middot; Janta General Store</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,7 +91,7 @@ if(isLoggedIn())
 
         <div class="form-group">
           <button type="submit" class="btn btn-primary btn-block btn-lg" tabindex="4">
-            Signin &nbsp; <i class="fa fa-play-circle"></i>
+            Sign In &nbsp; <i class="fa fa-play-circle"></i>
           </button>
         </div> <!-- /.form-group -->
 

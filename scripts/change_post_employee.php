@@ -1,5 +1,12 @@
 <?php
 
+include_once './access.php';
+
+if(!isManager())
+	die("YOU ARE NOT AUTHORISED!");
+?>
+<?php
+
 require 'config_sql.php';
 
 $employee_id = @$_GET['employee_id'];

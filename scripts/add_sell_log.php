@@ -1,5 +1,12 @@
 <?php
 
+include_once './access.php';
+
+if(!isLoggedIn())
+	die("YOU ARE NOT AUTHORISED!");
+?>
+<?php
+
 require 'config_sql.php';
 
 $data = json_decode(@$_GET['data']);

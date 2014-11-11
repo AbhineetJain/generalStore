@@ -63,29 +63,35 @@
 
         <ul class="mainnav-menu">
 
-          <li class="dropdown" id="nav_wholesalers">
-            <a href="./wholesaler_add_entry.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
-            Wholesalers
-            <i class="mainnav-caret"></i>
-            </a>
+          <?php
 
-            <ul class="dropdown-menu" role="menu">
-              <li>
-                <a href="wholesaler_add_entry.php">
-                <i class="fa fa-plus"></i> 
-                &nbsp;&nbsp;Add Entry
-                </a>
-              </li>
+          include_once 'scripts/access.php';
 
-              <li>
-                <a href="wholesaler_show.php">
-                <i class="fa fa-tasks"></i> 
-                &nbsp;&nbsp;Show Wholesalers
-                </a>
-              </li>
-
-            </ul>
-          </li>
+          if(isManager())
+            echo '<li class="dropdown" id="nav_wholesalers">
+                      <a href="./wholesaler_add_entry.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                      Wholesalers
+                      <i class="mainnav-caret"></i>
+                      </a>
+          
+                      <ul class="dropdown-menu" role="menu">
+                        <li>
+                          <a href="wholesaler_add_entry.php">
+                          <i class="fa fa-plus"></i> 
+                          &nbsp;&nbsp;Add Entry
+                          </a>
+                        </li>
+          
+                        <li>
+                          <a href="wholesaler_show.php">
+                          <i class="fa fa-tasks"></i> 
+                          &nbsp;&nbsp;Show Wholesalers
+                          </a>
+                        </li>
+          
+                      </ul>
+                    </li>'
+          ?>
 
           <li class="dropdown" id="nav_buy_log">
           	<a href="./buy_log_add_entry.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
