@@ -62,8 +62,20 @@ if(!isLoggedIn())
           <u>Home</u>
         </h3>
 
-        <div class="portlet-body">
-          
+        <div class="portlet-body" id="homediv">
+          <span class="large-size">Janta General Store</span>
+          <h1>Database Management System</h1>
+          <span>You have 
+            <?php
+
+              include_once 'scripts/access.php';
+
+              if(isManager())
+                echo "admin";
+              else if(isLoggedIn())
+                echo "user"
+            ?> level access.
+          </span>
         </div> <!-- /.portlet-body -->
 
       </div> <!-- /.portlet -->
