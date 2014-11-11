@@ -1,10 +1,9 @@
 <?php
 
-session_start();
+include_once 'scripts/access.php';
 
-if(isset($_SESSION['user']))
-  header("location: home.php");
-
+if(isLoggedIn())
+	header("location: home.php");
 ?>
 
 <!DOCTYPE html>

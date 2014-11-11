@@ -164,7 +164,9 @@
             </ul>
           </li> 
 
-          <li class="dropdown " id="nav_employee">
+         <?php
+		 
+		 $employee = '<li class="dropdown " id="nav_employee">
 
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
             Employees
@@ -194,7 +196,14 @@
               </li>
               
             </ul>
-          </li> 
+          </li> ';
+		  
+		  include_once 'scripts/access.php';
+
+		  if(isManager())
+			echo $employee;
+		  
+		  ?>
 
         </ul>
 
