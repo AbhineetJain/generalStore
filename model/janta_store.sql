@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 10, 2014 at 09:37 PM
+-- Generation Time: Nov 12, 2014 at 01:27 PM
 -- Server version: 5.5.40-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.5
 
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `employees` (
   `contact` varchar(15) NOT NULL,
   `number_of_leaves` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `employees`
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `employees` (
 
 INSERT INTO `employees` (`id`, `name`, `salary`, `address`, `date_of_joining`, `contact`, `number_of_leaves`) VALUES
 (2, 'Saksham Aggarwal', '10000', 'E-117', '5/11/2014', '7569156769', 3),
-(3, 'Abhineet Jain', '1000', 'E-214', '5/11/2014', '100', 5);
+(3, 'Abhineet Jain', '1000', 'E-214', '5/11/2014', '100', 6);
 
 -- --------------------------------------------------------
 
@@ -186,6 +186,13 @@ CREATE TABLE IF NOT EXISTS `salespersons` (
   KEY `employee_id` (`employee_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `salespersons`
+--
+
+INSERT INTO `salespersons` (`employee_id`, `educational_qualifications`, `user_id`, `password`) VALUES
+(3, 'NONE', 'abhineet', 'password');
+
 -- --------------------------------------------------------
 
 --
@@ -198,7 +205,7 @@ CREATE TABLE IF NOT EXISTS `sell_log` (
   `billing_amount` varchar(15) NOT NULL,
   `timestamp` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `sell_log`
@@ -206,7 +213,8 @@ CREATE TABLE IF NOT EXISTS `sell_log` (
 
 INSERT INTO `sell_log` (`id`, `discount`, `billing_amount`, `timestamp`) VALUES
 (2, '5', '95.03', '2014-11-06 23:58:51'),
-(3, '5', '95.03', '2014-11-06 23:59:46');
+(3, '5', '95.03', '2014-11-06 23:59:46'),
+(4, '0', '180.00', '2014-11-10 21:56:23');
 
 -- --------------------------------------------------------
 
@@ -221,7 +229,7 @@ CREATE TABLE IF NOT EXISTS `sold_items` (
   `qty` int(11) NOT NULL,
   `total_price` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `sold_items`
@@ -231,7 +239,10 @@ INSERT INTO `sold_items` (`id`, `sell_log_id`, `item_id`, `qty`, `total_price`) 
 (3, 2, 2, 2, '100'),
 (4, 2, 3, 1, '0.03'),
 (5, 3, 2, 2, '100'),
-(6, 3, 3, 1, '0.03');
+(6, 3, 3, 1, '0.03'),
+(7, 4, 9, 1, '50'),
+(8, 4, 8, 3, '30'),
+(9, 4, 2, 2, '100');
 
 -- --------------------------------------------------------
 
@@ -275,7 +286,7 @@ CREATE TABLE IF NOT EXISTS `wholesalers` (
   `name` varchar(30) NOT NULL,
   `transportation_cost` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `wholesalers`

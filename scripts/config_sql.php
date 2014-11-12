@@ -2,7 +2,7 @@
 	
 	$sql_hostname = "localhost"; //Enter hostname
 	$sql_user = "root"; // Enter Username
-	$sql_password = "123iiit"; // Enter password
+	$sql_password = "password"; // Enter password
 	$sql_db = "janta_store"; // Enter db_name
 	
 	$mysqli = new mysqli( $sql_hostname, $sql_user, $sql_password, $sql_db );
