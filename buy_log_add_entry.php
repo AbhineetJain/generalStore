@@ -76,7 +76,7 @@ if(!isLoggedIn())
                     <?php
                       require 'scripts/config_sql.php';
 
-                      $sql = $mysqli->query("SELECT * from wholesalers WHERE id>0");
+                      $sql = $mysqli->query("SELECT * from wholesalers WHERE id>0 ORDER BY name");
 
                       while($row = $sql->fetch_assoc())
                         echo '<option value="'.$row['id'].'">'.$row['name'].'</option>';

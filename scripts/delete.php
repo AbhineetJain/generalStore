@@ -2,8 +2,13 @@
 
 include_once './access.php';
 
-if(!isManager())
-	die("YOU ARE NOT AUTHORISED!");
+if(!isManager()){
+	echo '<script>
+		alert("YOU ARE NOT AUTHORISED");
+		location.href = "../";
+		</script>';
+	die();
+}
 ?>
 <?php
 

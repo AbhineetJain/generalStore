@@ -62,6 +62,7 @@ CREATE TABLE `cleaners` (
 
 LOCK TABLES `cleaners` WRITE;
 /*!40000 ALTER TABLE `cleaners` DISABLE KEYS */;
+INSERT INTO `cleaners` VALUES (4);
 /*!40000 ALTER TABLE `cleaners` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -91,7 +92,7 @@ CREATE TABLE `commodities` (
 
 LOCK TABLES `commodities` WRITE;
 /*!40000 ALTER TABLE `commodities` DISABLE KEYS */;
-INSERT INTO `commodities` VALUES (2,'Colgate Toothpaste 100g','NONE','50','I know it',10,20,'Confectionery'),(3,'Reezig Inc.','LOL','0.96','Left Shelf',4,7,'Miscellaneous'),(7,'Sasta Paan','Cheap Good Paan','10','Nowhere',50,150,'Miscellaneous'),(9,'Good Day Cookies','Biscuits','50','Showcase 2',5,5,'Confectionery'),(10,'Buttons','4-hole buttons','.5','Left Shelf',50,100,'Miscellaneous'),(11,'Dettol','Antiseptic Handwash','65','Left Shelf',15,30,'Toiletries');
+INSERT INTO `commodities` VALUES (2,'Colgate Toothpaste 100g','NONE','50','I know it',10,20,'Confectionery'),(3,'Reezig Inc.','LOL','0.96','Left Shelf',4,7,'Miscellaneous'),(7,'Sasta Paan','Cheap Good Paan','10','Nowhere',50,150,'Miscellaneous'),(9,'Good Day Cookies','Biscuits','50','Showcase 2',5,5,'Confectionery'),(10,'Buttons','4-hole buttons','50','Right Shelf',50,100,'Miscellaneous'),(11,'Dettol','Antiseptic Handwash','65','Left Shelf',15,30,'Toiletries');
 /*!40000 ALTER TABLE `commodities` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -136,7 +137,7 @@ CREATE TABLE `employees` (
   `contact` varchar(15) NOT NULL,
   `number_of_leaves` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -145,7 +146,7 @@ CREATE TABLE `employees` (
 
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
-INSERT INTO `employees` VALUES (2,'Saksham Aggarwal','10000','E-117','5/11/2014','7569156769',3),(3,'Abhineet Jain','1000','E-214','5/11/2014','100',6);
+INSERT INTO `employees` VALUES (2,'Saksham Aggarwal','10000','E-117','5/11/2014','7569156769',3),(3,'Abhineet Jain','1000','E-214','5/11/2014','100',6),(4,'Tinu Sahay','1000','E-128','2014-11-11','123479650',0);
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -240,7 +241,7 @@ CREATE TABLE `sell_log` (
   `billing_amount` varchar(15) NOT NULL,
   `timestamp` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -249,7 +250,7 @@ CREATE TABLE `sell_log` (
 
 LOCK TABLES `sell_log` WRITE;
 /*!40000 ALTER TABLE `sell_log` DISABLE KEYS */;
-INSERT INTO `sell_log` VALUES (2,'5','95.03','2014-11-06 23:58:51'),(3,'5','95.03','2014-11-06 23:59:46'),(4,'0','180.00','2014-11-10 21:56:23');
+INSERT INTO `sell_log` VALUES (2,'5','95.03','2014-11-06 23:58:51'),(3,'5','95.03','2014-11-06 23:59:46'),(4,'0','180.00','2014-11-10 21:56:23'),(5,'0','260.00','2014-11-13 22:38:55');
 /*!40000 ALTER TABLE `sell_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -267,7 +268,7 @@ CREATE TABLE `sold_items` (
   `qty` int(11) NOT NULL,
   `total_price` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -276,7 +277,7 @@ CREATE TABLE `sold_items` (
 
 LOCK TABLES `sold_items` WRITE;
 /*!40000 ALTER TABLE `sold_items` DISABLE KEYS */;
-INSERT INTO `sold_items` VALUES (3,2,2,2,'100'),(4,2,3,1,'0.03'),(5,3,2,2,'100'),(6,3,3,1,'0.03'),(7,4,9,1,'50'),(8,4,8,3,'30'),(9,4,2,2,'100');
+INSERT INTO `sold_items` VALUES (3,2,2,2,'100'),(4,2,3,1,'0.03'),(5,3,2,2,'100'),(6,3,3,1,'0.03'),(7,4,9,1,'50'),(8,4,8,3,'30'),(9,4,2,2,'100'),(10,5,2,5,'250'),(11,5,10,20,'10'),(12,5,0,10,'0');
 /*!40000 ALTER TABLE `sold_items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -348,7 +349,7 @@ CREATE TABLE `wholesalers` (
 
 LOCK TABLES `wholesalers` WRITE;
 /*!40000 ALTER TABLE `wholesalers` DISABLE KEYS */;
-INSERT INTO `wholesalers` VALUES (1,'Abhineet Paan Bhandar','11'),(2,'Chandan chocolates','15.5'),(3,'Paplu paper waala','50'),(4,'Abhineet Aloo waala','25'),(5,'Mahima suppliers','35'),(6,'Moudgil biscuits','32.5'),(7,'Pandey plastic shop','12.53'),(8,'Gupta gud waala','35.65'),(9,'Debu dibiya','100'),(10,'Mishra mishri','65'),(11,'Saksham soaps','50'),(12,'Apaar stationery','60'),(13,'Bittu buttons','65'),(14,'Utkarsh bulbs','12');
+INSERT INTO `wholesalers` VALUES (1,'Abhineet Paan Bhandar','11'),(2,'Chandan chocolates','15.5'),(3,'Paplu paper waala','50'),(4,'Abhineet Aloo waala','25'),(5,'Mahima suppliers','35'),(6,'Moudgil biscuits','32.5'),(7,'Pandey plastic shop','12.53'),(8,'Gupta gud waala','35.65'),(9,'Debu dibiya','100'),(10,'Mishra mishri','65'),(11,'Saksham soaps','50'),(13,'Bittu buttons','65');
 /*!40000 ALTER TABLE `wholesalers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -361,4 +362,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-13 22:27:40
+-- Dump completed on 2014-11-13 22:48:57

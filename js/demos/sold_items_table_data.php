@@ -19,6 +19,8 @@ while($wh = $wholesalers->fetch_assoc())
 	$wh["DT_RowID"] = "row_".$count;
 	$item_id = $wh['item_id'];
 	$wh['item_name'] = $mysqli->query("SELECT name FROM commodities WHERE id='$item_id' LIMIT 1")->fetch_assoc()['name'];
+	if($wh['item_name'] == "")
+		$wh['item_name'] = "Item name not available";
 	$data['aaData'][$count-1] = $wh;
 	$count++;
 }
