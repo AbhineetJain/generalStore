@@ -153,13 +153,18 @@
             </a>
 
             <ul class="dropdown-menu" role="menu">
-              <li>
-                <a href="commodities_add_entry.php">
-                <i class="fa fa-plus"></i> 
-                &nbsp;&nbsp;Add Entries
-                </a>
-              </li>
+              <?php
 
+                include_once 'scripts/access.php';
+
+                if(isManager())
+                  echo '<li>
+                          <a href="commodities_add_entry.php">
+                          <i class="fa fa-plus"></i> 
+                          &nbsp;&nbsp;Add Entries
+                          </a>
+                        </li>'
+              ?>
               <li>
                 <a href="commodities_show.php">
                 <i class="fa fa-tasks"></i> 
